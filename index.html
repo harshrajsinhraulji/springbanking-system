@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Adhikaar-DBT - Your Scholarship, Instantly</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-color: #FEFBF6;
+        }
+        .brand-saffron { color: #FF9933; }
+        .brand-green { color: #138808; }
+        .brand-blue { color: #000080; }
+        .btn-primary {
+            background-color: #2563EB;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #1D4ED8;
+        }
+        .modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .chat-widget {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        .faq-question svg {
+            transition: transform 0.3s ease;
+        }
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold flex items-center">
+                <span class="brand-saffron">Adhikaar</span><span class="brand-green">-DBT</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#features" class="text-gray-600 hover:text-blue-600">Features</a>
+                <a href="#how-it-works" class="text-gray-600 hover:text-blue-600">How It Works</a>
+                <a href="#faq" class="text-gray-600 hover:text-blue-600">FAQ</a>
+                <button id="loginBtn" class="bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-lg hover:bg-blue-200">Login/Register</button>
+            </div>
+            <div class="md:hidden">
+                 <button id="mobileMenuBtn" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white py-2">
+            <a href="#features" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Features</a>
+            <a href="#how-it-works" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">How It Works</a>
+            <a href="#faq" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">FAQ</a>
+            <div class="px-6 py-2">
+                <button id="mobileLoginBtn" class="w-full bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-lg hover:bg-blue-200">Login/Register</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg">
+            <div class="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+                        Don't let bank issues delay your scholarship.
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Project Adhikaar-DBT helps you ensure your bank account is ready for Direct Benefit Transfer (DBT), so you get your money on time, every time.
+                    </p>
+                    <button id="checkStatusBtn" class="btn-primary text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl">
+                        Check Your DBT Status Now
+                    </button>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/E2F0FF/333?text=Empowered+Student" alt="Happy student receiving scholarship" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-2">A Simple 3-Step Process</h2>
+                <p class="text-gray-600 mb-12 max-w-2xl mx-auto">We make it easy to understand and verify your account status.</p>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Step 1 -->
+                    <div class="p-8 bg-gray-50 rounded-xl shadow-md">
+                        <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m-9-5.747h18"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18a6 6 0 100-12 6 6 0 000 12z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">1. Learn & Understand</h3>
+                        <p class="text-gray-600">Use our simple guides and chatbot, Aadhaar Dost, to learn the difference between a linked and a DBT-seeded account.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="p-8 bg-gray-50 rounded-xl shadow-md">
+                        <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                             <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">2. Check Your Status</h3>
+                        <p class="text-gray-600">Use our 1-Click tool to instantly check if your bank account is correctly seeded for DBT payments.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="p-8 bg-gray-50 rounded-xl shadow-md">
+                        <div class="bg-yellow-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V7a2 2 0 012-2h6l2-2h2v2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">3. Get Help</h3>
+                        <p class="text-gray-600">If there's an issue, we'll guide you on the next steps and help you find a local DBT-Sathi for in-person assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20">
+            <div class="container mx-auto px-6">
+                 <h2 class="text-3xl font-bold mb-12 text-center">Powerful Tools for Every Student</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://placehold.co/500x350/F0F9FF/333?text=Web+App+Dashboard" alt="Dashboard screenshot" class="rounded-lg shadow-xl">
+                    </div>
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Personalized Dashboard</h3>
+                            <p class="text-gray-600">Create a free account to track your DBT status, see your quiz progress, and save helpful resources all in one place.</p>
+                        </div>
+                         <div>
+                            <h3 class="text-xl font-semibold mb-2">Gamified Learning Quiz</h3>
+                            <p class="text-gray-600 mb-4">Take a fun, simple quiz to test your knowledge. Earn a "DBT Champion" certificate to share with your friends!</p>
+                             <button id="startQuizBtn" class="bg-yellow-100 text-yellow-800 font-semibold px-4 py-2 rounded-lg hover:bg-yellow-200">Start Quiz Now</button>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Aadhaar Dost - Your AI Helper</h3>
+                            <p class="text-gray-600">Our on-site chatbot is available 24/7 to answer your questions instantly. No more waiting or confusion.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+                <div class="max-w-3xl mx-auto space-y-4" id="faqAccordion">
+                    <!-- FAQ Item 1 -->
+                    <div class="border rounded-lg">
+                        <button class="faq-question w-full text-left p-4 flex justify-between items-center font-semibold text-gray-800">
+                            What is the difference between Aadhaar Linking and Seeding?
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden p-4 pt-0 text-gray-600">
+                            A 'linked' account uses Aadhaar for identity proof (KYC). A 'seeded' account is specifically approved to receive government money (like scholarships) through the Aadhaar payment system managed by NPCI. You MUST seed your account.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                     <div class="border rounded-lg">
+                        <button class="faq-question w-full text-left p-4 flex justify-between items-center font-semibold text-gray-800">
+                            What documents do I need for seeding?
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden p-4 pt-0 text-gray-600">
+                           You only need your Aadhaar card and your bank passbook. Visit your bank branch and ask for the 'Aadhaar Seeding and DBT Consent Form'. Fill it out and submit it.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                     <div class="border rounded-lg">
+                        <button class="faq-question w-full text-left p-4 flex justify-between items-center font-semibold text-gray-800">
+                            Is there any cost for Aadhaar seeding?
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden p-4 pt-0 text-gray-600">
+                            No, there is absolutely no cost for Aadhaar seeding. It is a free service provided by all banks as per government guidelines.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="border rounded-lg">
+                        <button class="faq-question w-full text-left p-4 flex justify-between items-center font-semibold text-gray-800">
+                           How long does it take to get my account seeded?
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden p-4 pt-0 text-gray-600">
+                            After you submit the form at the bank, it usually takes 3 to 5 working days for the seeding to be completed and reflected in the NPCI system.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-bold text-lg"><span class="brand-saffron">Adhikaar</span><span class="brand-green">-DBT</span></p>
+            <p class="mt-2 text-gray-400">An initiative by the Ministry of Social Justice and Empowerment.</p>
+            <div class="mt-4">
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Aadhaar Dost Chatbot Widget -->
+    <div id="chatWidgetContainer" class="fixed bottom-5 right-5 z-50">
+        <!-- Chat Bubble -->
+        <button id="chatBubble" class="bg-blue-600 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center">
+             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+        </button>
+
+        <!-- Chat Window -->
+        <div id="chatWindow" class="chat-widget hidden absolute bottom-20 right-0 w-80 h-96 bg-white rounded-xl shadow-2xl flex flex-col transform opacity-0 translate-y-4">
+            <div class="bg-blue-600 text-white p-4 rounded-t-xl">
+                <h3 class="font-bold text-lg">Aadhaar Dost</h3>
+                <p class="text-sm opacity-80">Your 24/7 AI Assistant</p>
+            </div>
+            <div id="chatMessages" class="flex-1 p-4 overflow-y-auto">
+                <!-- Bot welcome message -->
+                <div class="mb-3">
+                    <div class="bg-gray-200 text-gray-800 p-2 rounded-lg inline-block max-w-xs">
+                        Hello! I am Aadhaar Dost. How can I help you today? Ask me about DBT, Aadhaar Seeding, or scholarships.
+                    </div>
+                </div>
+            </div>
+            <div class="p-2 border-t">
+                <input id="chatInput" type="text" placeholder="Type your message..." class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Login/Register Modal -->
+    <div id="loginModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 invisible opacity-0 z-50">
+        <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-md relative">
+            <button id="closeLoginModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            <h2 class="text-2xl font-bold mb-6 text-center">Login to Your Dashboard</h2>
+            <form>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 mb-1">Email or Phone</label>
+                    <input type="text" id="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email or phone">
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block text-gray-700 mb-1">Password</label>
+                    <input type="password" id="password" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your password">
+                </div>
+                <button type="submit" class="w-full btn-primary text-white font-bold py-2 px-4 rounded-lg">Login</button>
+                <p class="text-center text-sm text-gray-600 mt-4">
+                    Don't have an account? <a href="#" class="text-blue-600 font-semibold">Register here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- DBT Status Check Modal -->
+    <div id="statusCheckModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 invisible opacity-0 z-50">
+        <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-md relative">
+             <button id="closeStatusModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            <div id="statusInitial">
+                <h2 class="text-2xl font-bold mb-6 text-center">Check DBT Seeding Status</h2>
+                <p class="text-center text-gray-600 mb-4">Enter your 12-digit Aadhaar number to check if it's seeded with your bank for DBT.</p>
+                <form id="statusCheckForm">
+                    <div class="mb-4">
+                        <label for="aadhaar" class="block text-gray-700 mb-1">Aadhaar Number</label>
+                        <input type="text" id="aadhaar" class="w-full px-3 py-2 border rounded-lg text-center tracking-widest focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="XXXX XXXX XXXX" maxlength="14">
+                    </div>
+                    <button type="submit" class="w-full btn-primary text-white font-bold py-2 px-4 rounded-lg">Check Status</button>
+                </form>
+            </div>
+             <div id="statusResult" class="hidden text-center">
+                <!-- Content will be injected by JS -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Quiz Modal -->
+    <div id="quizModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 invisible opacity-0 z-50">
+        <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-lg relative">
+             <button id="closeQuizModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            <div id="quizContainer">
+                <h2 class="text-2xl font-bold mb-4 text-center">DBT Champion Quiz</h2>
+                <div id="quizQuestion" class="text-lg font-semibold mb-4"></div>
+                <div id="quizOptions" class="space-y-3"></div>
+                <div id="quizFeedback" class="mt-4 text-center font-semibold"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // --- Mobile Menu ---
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Modal Logic ---
+        const loginBtn = document.getElementById('loginBtn');
+        const mobileLoginBtn = document.getElementById('mobileLoginBtn');
+        const loginModal = document.getElementById('loginModal');
+        const closeLoginModal = document.getElementById('closeLoginModal');
+
+        const checkStatusBtn = document.getElementById('checkStatusBtn');
+        const statusCheckModal = document.getElementById('statusCheckModal');
+        const closeStatusModal = document.getElementById('closeStatusModal');
+
+        const startQuizBtn = document.getElementById('startQuizBtn');
+        const quizModal = document.getElementById('quizModal');
+        const closeQuizModal = document.getElementById('closeQuizModal');
+        
+        function openModal(modal) {
+            modal.classList.remove('invisible', 'opacity-0');
+        }
+
+        function closeModal(modal) {
+            modal.classList.add('invisible', 'opacity-0');
+        }
+
+        loginBtn.addEventListener('click', () => openModal(loginModal));
+        mobileLoginBtn.addEventListener('click', () => {
+             mobileMenu.classList.add('hidden');
+             openModal(loginModal);
+        });
+        closeLoginModal.addEventListener('click', () => closeModal(loginModal));
+        
+        checkStatusBtn.addEventListener('click', () => openModal(statusCheckModal));
+        closeStatusModal.addEventListener('click', () => {
+            closeModal(statusCheckModal);
+            // Reset status check UI
+            document.getElementById('statusInitial').classList.remove('hidden');
+            document.getElementById('statusResult').classList.add('hidden');
+            document.getElementById('aadhaar').value = '';
+        });
+        
+        startQuizBtn.addEventListener('click', () => {
+            openModal(quizModal);
+            startQuiz();
+        });
+        closeQuizModal.addEventListener('click', () => closeModal(quizModal));
+
+
+        // Close modals on outside click
+        window.addEventListener('click', (e) => {
+            if (e.target === loginModal) closeModal(loginModal);
+            if (e.target === statusCheckModal) closeModal(statusCheckModal);
+            if (e.target === quizModal) closeModal(quizModal);
+        });
+
+        // --- DBT Status Check Simulation ---
+        const statusCheckForm = document.getElementById('statusCheckForm');
+        const statusInitial = document.getElementById('statusInitial');
+        const statusResult = document.getElementById('statusResult');
+        const aadhaarInput = document.getElementById('aadhaar');
+
+        // Format Aadhaar input with spaces
+        aadhaarInput.addEventListener('input', (e) => {
+            let val = e.target.value.replace(/\s/g, '');
+            let formattedVal = '';
+            for(let i = 0; i < val.length; i++) {
+                if (i > 0 && i % 4 === 0) {
+                    formattedVal += ' ';
+                }
+                formattedVal += val[i];
+            }
+            e.target.value = formattedVal;
+        });
+
+        statusCheckForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const aadhaarNumber = aadhaarInput.value.replace(/\s/g, '');
+            
+            if (aadhaarNumber.length !== 12 || !/^\d+$/.test(aadhaarNumber)) {
+                alert('Please enter a valid 12-digit Aadhaar number.');
+                return;
+            }
+
+            statusInitial.classList.add('hidden');
+            statusResult.classList.remove('hidden');
+            statusResult.innerHTML = `<div class="text-center p-4">Checking...</div>`;
+
+            setTimeout(() => {
+                // Simulate success or failure
+                const isSuccess = Math.random() > 0.3; // 70% chance of success
+                if (isSuccess) {
+                    statusResult.innerHTML = `
+                        <div class="bg-green-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto">
+                           <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mt-4 text-green-700">Congratulations!</h3>
+                        <p class="text-gray-600 mt-2">Your Aadhaar is successfully seeded with your bank for DBT payments.</p>
+                        <p class="text-sm mt-1 text-gray-500">Bank: State Bank of India (XX...1234)</p>
+                    `;
+                } else {
+                     statusResult.innerHTML = `
+                        <div class="bg-red-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto">
+                            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mt-4 text-red-700">Action Required!</h3>
+                        <p class="text-gray-600 mt-2">Your Aadhaar is NOT seeded for DBT payments. Please visit your bank branch with your Aadhaar card to complete the process.</p>
+                    `;
+                }
+            }, 1500);
+        });
+
+        // --- Aadhaar Dost Chatbot Logic ---
+        const chatBubble = document.getElementById('chatBubble');
+        const chatWindow = document.getElementById('chatWindow');
+        const chatMessages = document.getElementById('chatMessages');
+        const chatInput = document.getElementById('chatInput');
+
+        const faqData = {
+            "dbt": "DBT stands for Direct Benefit Transfer. It's a way for the government to send money like scholarships directly to your bank account.",
+            "seeding": "Aadhaar Seeding means connecting your Aadhaar number to your bank account and giving consent to receive DBT payments. This is different from just linking Aadhaar for KYC.",
+            "difference": "A 'linked' account uses Aadhaar for identity only. A 'seeded' account is approved to receive government money through the Aadhaar payment system (NPCI). You must seed your account for scholarships.",
+            "how to seed": "To seed your account, visit your bank branch with your Aadhaar card and fill out the DBT consent form. It's a simple one-time process.",
+            "check status": "You can check your status using the 'Check Your DBT Status Now' button on our homepage. It's a quick and easy process.",
+            "scholarship": "To get your scholarship on time, your bank account MUST be Aadhaar-seeded for DBT. A simple linked account is not enough.",
+            "documents": "You only need your Aadhaar card and your bank passbook. Go to your bank branch and ask for the 'Aadhaar Seeding and DBT Consent Form'.",
+            "npci": "NPCI is the National Payments Corporation of India. They manage the system that sends DBT money to your seeded bank account using your Aadhaar number.",
+            "cost": "There is absolutely no cost for Aadhaar seeding. It is a free service provided by all banks.",
+            "time": "After you submit the form at the bank, it usually takes 3 to 5 working days for the seeding to be reflected in the system.",
+            "bank refuses": "If the bank staff is unaware or refuses, you can show them the circular from the Finance Ministry regarding DBT seeding. You can also escalate the issue to the bank manager."
+        };
+
+        chatBubble.addEventListener('click', () => {
+            const isHidden = chatWindow.classList.contains('hidden');
+            if(isHidden) {
+                chatWindow.classList.remove('hidden');
+                setTimeout(() => {
+                    chatWindow.classList.remove('opacity-0', 'translate-y-4');
+                }, 10);
+            } else {
+                chatWindow.classList.add('opacity-0', 'translate-y-4');
+                setTimeout(() => {
+                    chatWindow.classList.add('hidden');
+                }, 300);
+            }
+        });
+
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && chatInput.value.trim() !== '') {
+                handleUserMessage();
+            }
+        });
+
+        function handleUserMessage() {
+            const userMessage = chatInput.value.trim();
+            appendMessage(userMessage, 'user');
+            chatInput.value = '';
+            
+            setTimeout(() => {
+                const botResponse = getBotResponse(userMessage.toLowerCase());
+                appendMessage(botResponse, 'bot');
+            }, 1000);
+        }
+
+        function appendMessage(message, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('mb-3');
+            if (sender === 'user') {
+                messageDiv.innerHTML = `<div class="bg-blue-600 text-white p-2 rounded-lg ml-auto inline-block max-w-xs break-words">${message}</div>`;
+                messageDiv.classList.add('text-right');
+            } else {
+                 messageDiv.innerHTML = `<div class="bg-gray-200 text-gray-800 p-2 rounded-lg inline-block max-w-xs break-words">${message}</div>`;
+            }
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function getBotResponse(message) {
+            if (message.includes('dbt')) return faqData.dbt;
+            if (message.includes('seed')) return faqData.seeding;
+            if (message.includes('difference') || message.includes('link')) return faqData.difference;
+            if (message.includes('how')) return faqData['how to seed'];
+            if (message.includes('status')) return faqData['check status'];
+            if (message.includes('scholarship')) return faqData.scholarship;
+            if (message.includes('document')) return faqData.documents;
+            if (message.includes('npci')) return faqData.npci;
+            if (message.includes('cost') || message.includes('fee') || message.includes('charge')) return faqData.cost;
+            if (message.includes('time') || message.includes('how long')) return faqData.time;
+            if (message.includes('bank') && (message.includes('refuse') || message.includes('deny'))) return faqData['bank refuses'];
+            if (message.includes('hello') || message.includes('hi')) return "Hello! How can I help you with DBT or Aadhaar seeding?";
+            return "I'm sorry, I don't understand that. You can ask me about 'documents', 'cost', 'time', 'DBT', or 'seeding'.";
+        }
+        
+        // --- FAQ Accordion ---
+        const faqAccordion = document.getElementById('faqAccordion');
+        if (faqAccordion) {
+            const questions = faqAccordion.querySelectorAll('.faq-question');
+            questions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('svg');
+                    
+                    const isHidden = answer.classList.contains('hidden');
+                    // Optional: Close other open answers
+                    // questions.forEach(q => {
+                    //     q.nextElementSibling.classList.add('hidden');
+                    //     q.querySelector('svg').classList.remove('rotate-180');
+                    // });
+
+                    if (isHidden) {
+                        answer.classList.remove('hidden');
+                        icon.classList.add('rotate-180');
+                    } else {
+                        answer.classList.add('hidden');
+                        icon.classList.remove('rotate-180');
+                    }
+                });
+            });
+        }
+        
+        // --- Quiz Logic ---
+        const quizContainer = document.getElementById('quizContainer');
+        const quizQuestionEl = document.getElementById('quizQuestion');
+        const quizOptionsEl = document.getElementById('quizOptions');
+        const quizFeedbackEl = document.getElementById('quizFeedback');
+
+        const quizData = [
+            {
+                question: "What must you do to receive scholarship money directly in your account?",
+                options: ["Link Aadhaar for KYC", "Seed Aadhaar for DBT", "Open a new account", "Both A and B"],
+                answer: "Seed Aadhaar for DBT"
+            },
+            {
+                question: "Is there a fee for Aadhaar Seeding at the bank?",
+                options: ["Yes, Rs. 50", "Yes, Rs. 100", "No, it's completely free", "Only for private banks"],
+                answer: "No, it's completely free"
+            },
+            {
+                question: "Which organization manages the DBT payment system?",
+                options: ["UIDAI", "Reserve Bank of India", "Ministry of Finance", "NPCI"],
+                answer: "NPCI"
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function startQuiz() {
+            currentQuestionIndex = 0;
+            score = 0;
+            quizFeedbackEl.textContent = '';
+            showQuestion();
+        }
+
+        function showQuestion() {
+            if (currentQuestionIndex < quizData.length) {
+                let currentQuestion = quizData[currentQuestionIndex];
+                quizQuestionEl.textContent = `Q${currentQuestionIndex + 1}: ${currentQuestion.question}`;
+                quizOptionsEl.innerHTML = '';
+                currentQuestion.options.forEach(option => {
+                    const button = document.createElement('button');
+                    button.textContent = option;
+                    button.classList.add('w-full', 'p-3', 'text-left', 'border', 'rounded-lg', 'hover:bg-gray-100');
+                    button.onclick = () => selectAnswer(option, button);
+                    quizOptionsEl.appendChild(button);
+                });
+            } else {
+                showQuizResult();
+            }
+        }
+
+        function selectAnswer(selectedOption, btn) {
+            let correctAnswer = quizData[currentQuestionIndex].answer;
+            const allOptions = quizOptionsEl.querySelectorAll('button');
+            allOptions.forEach(b => b.disabled = true); // Disable all buttons
+
+            if (selectedOption === correctAnswer) {
+                score++;
+                btn.classList.add('bg-green-200', 'border-green-500');
+                quizFeedbackEl.textContent = 'Correct!';
+                quizFeedbackEl.classList.add('text-green-600');
+            } else {
+                btn.classList.add('bg-red-200', 'border-red-500');
+                quizFeedbackEl.textContent = `Wrong! The correct answer is: ${correctAnswer}`;
+                 quizFeedbackEl.classList.add('text-red-600');
+            }
+
+            setTimeout(() => {
+                currentQuestionIndex++;
+                quizFeedbackEl.textContent = '';
+                quizFeedbackEl.classList.remove('text-green-600', 'text-red-600');
+                showQuestion();
+            }, 2000);
+        }
+
+        function showQuizResult() {
+            quizQuestionEl.textContent = 'Quiz Complete!';
+            quizOptionsEl.innerHTML = `
+                <div class="text-center">
+                    <p class="text-xl">You scored ${score} out of ${quizData.length}!</p>
+                    <p class="text-2xl font-bold mt-4 text-green-600">🎉 You are a DBT Champion! 🎉</p>
+                    <button id="restartQuizBtn" class="mt-6 btn-primary text-white font-semibold px-4 py-2 rounded-lg">Try Again</button>
+                </div>
+            `;
+            document.getElementById('restartQuizBtn').addEventListener('click', startQuiz);
+        }
+    </script>
+</body>
+</html>
+

@@ -48,10 +48,27 @@
                 <span class="brand-saffron">Adhikaar</span><span class="brand-green">-DBT</span>
             </a>
             <div class="hidden md:flex items-center space-x-6">
-                <a href="#features" class="text-gray-600 hover:text-blue-600">Features</a>
-                <a href="#how-it-works" class="text-gray-600 hover:text-blue-600">How It Works</a>
-                <a href="#faq" class="text-gray-600 hover:text-blue-600">FAQ</a>
-                <button id="loginBtn" class="bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-lg hover:bg-blue-200">Login/Register</button>
+                <a href="#features" class="text-gray-600 hover:text-blue-600" data-key="navFeatures">Features</a>
+                <a href="#videos" class="text-gray-600 hover:text-blue-600" data-key="navVideos">Videos</a>
+                <a href="#faq" class="text-gray-600 hover:text-blue-600" data-key="navFaq">FAQ</a>
+                <a href="#locator" class="text-gray-600 hover:text-blue-600" data-key="navFindHelp">Find Help</a>
+                <a href="#" id="scholarshipNavBtn" class="text-gray-600 hover:text-blue-600" data-key="navScholarships">Scholarships</a>
+                
+                <!-- Language Dropdown -->
+                <div class="relative">
+                    <button id="languageBtn" class="flex items-center text-gray-600 hover:text-blue-600">
+                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3"></path></svg>
+                        <span id="languageLabel">English</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="languageDropdown" class="absolute hidden bg-white shadow-lg rounded-md mt-2 py-1 w-32 z-10">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="en">English</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="hi">हिन्दी</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="ta">தமிழ்</a>
+                    </div>
+                </div>
+
+                <button id="loginBtn" class="bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-lg hover:bg-blue-200" data-key="loginRegisterBtn">Login/Register</button>
             </div>
             <div class="md:hidden">
                  <button id="mobileMenuBtn" class="text-gray-600 focus:outline-none">
@@ -61,11 +78,13 @@
         </nav>
         <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden bg-white py-2">
-            <a href="#features" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Features</a>
-            <a href="#how-it-works" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">How It Works</a>
-            <a href="#faq" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">FAQ</a>
+            <a href="#features" class="block px-6 py-2 text-gray-600 hover:bg-gray-100" data-key="navFeatures">Features</a>
+            <a href="#videos" class="block px-6 py-2 text-gray-600 hover:bg-gray-100" data-key="navVideos">Videos</a>
+            <a href="#faq" class="block px-6 py-2 text-gray-600 hover:bg-gray-100" data-key="navFaq">FAQ</a>
+            <a href="#locator" class="block px-6 py-2 text-gray-600 hover:bg-gray-100" data-key="navFindHelp">Find Help</a>
+            <a href="#" id="mobileScholarshipNavBtn" class="block px-6 py-2 text-gray-600 hover:bg-gray-100" data-key="navScholarships">Scholarships</a>
             <div class="px-6 py-2">
-                <button id="mobileLoginBtn" class="w-full bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-lg hover:bg-blue-200">Login/Register</button>
+                <button id="mobileLoginBtn" class="w-full bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-lg hover:bg-blue-200" data-key="loginRegisterBtn">Login/Register</button>
             </div>
         </div>
     </header>
@@ -76,18 +95,18 @@
         <section class="hero-bg">
             <div class="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4" data-key="heroTitle">
                         Don't let bank issues delay your scholarship.
                     </h1>
-                    <p class="text-lg text-gray-600 mb-8">
+                    <p class="text-lg text-gray-600 mb-8" data-key="heroSubtitle">
                         Project Adhikaar-DBT helps you ensure your bank account is ready for Direct Benefit Transfer (DBT), so you get your money on time, every time.
                     </p>
-                    <button id="checkStatusBtn" class="btn-primary text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl">
+                    <button id="checkStatusBtn" class="btn-primary text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl" data-key="checkStatusBtnHero">
                         Check Your DBT Status Now
                     </button>
                 </div>
                 <div class="md:w-1/2">
-                    <img src="https://placehold.co/600x400/E2F0FF/333?text=Empowered+Student" alt="Happy student receiving scholarship" class="rounded-lg shadow-2xl">
+                    <img src="https://placehold.co/600x400/E2F0FF/333?text=Student+Celebrating+Scholarship" alt="Happy student receiving scholarship" class="rounded-lg shadow-2xl">
                 </div>
             </div>
         </section>
@@ -95,32 +114,32 @@
         <!-- How It Works Section -->
         <section id="how-it-works" class="py-20 bg-white">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-2">A Simple 3-Step Process</h2>
-                <p class="text-gray-600 mb-12 max-w-2xl mx-auto">We make it easy to understand and verify your account status.</p>
+                <h2 class="text-3xl font-bold mb-2" data-key="howItWorksTitle">A Simple 3-Step Process</h2>
+                <p class="text-gray-600 mb-12 max-w-2xl mx-auto" data-key="howItWorksSubtitle">We make it easy to understand and verify your account status.</p>
                 <div class="grid md:grid-cols-3 gap-10">
                     <!-- Step 1 -->
                     <div class="p-8 bg-gray-50 rounded-xl shadow-md">
                         <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                             <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m-9-5.747h18"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18a6 6 0 100-12 6 6 0 000 12z"></path></svg>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">1. Learn & Understand</h3>
-                        <p class="text-gray-600">Use our simple guides and chatbot, Aadhaar Dost, to learn the difference between a linked and a DBT-seeded account.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-key="step1Title">1. Learn & Understand</h3>
+                        <p class="text-gray-600" data-key="step1Text">Use our simple guides and chatbot, Aadhaar Dost, to learn the difference between a linked and a DBT-seeded account.</p>
                     </div>
                     <!-- Step 2 -->
                     <div class="p-8 bg-gray-50 rounded-xl shadow-md">
                         <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">2. Check Your Status</h3>
-                        <p class="text-gray-600">Use our 1-Click tool to instantly check if your bank account is correctly seeded for DBT payments.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-key="step2Title">2. Check Your Status</h3>
+                        <p class="text-gray-600" data-key="step2Text">Use our 1-Click tool to instantly check if your bank account is correctly seeded for DBT payments.</p>
                     </div>
                     <!-- Step 3 -->
                     <div class="p-8 bg-gray-50 rounded-xl shadow-md">
                         <div class="bg-yellow-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                             <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V7a2 2 0 012-2h6l2-2h2v2z"></path></svg>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">3. Get Help</h3>
-                        <p class="text-gray-600">If there's an issue, we'll guide you on the next steps and help you find a local DBT-Sathi for in-person assistance.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-key="step3Title">3. Get Help</h3>
+                        <p class="text-gray-600" data-key="step3Text">If there's an issue, we'll guide you on the next steps and help you find a local DBT-Sathi for in-person assistance.</p>
                     </div>
                 </div>
             </div>
@@ -129,25 +148,89 @@
         <!-- Features Section -->
         <section id="features" class="py-20">
             <div class="container mx-auto px-6">
-                 <h2 class="text-3xl font-bold mb-12 text-center">Powerful Tools for Every Student</h2>
+                 <h2 class="text-3xl font-bold mb-12 text-center" data-key="featuresTitle">Powerful Tools for Every Student</h2>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <img src="https://placehold.co/500x350/F0F9FF/333?text=Web+App+Dashboard" alt="Dashboard screenshot" class="rounded-lg shadow-xl">
+                        <img src="https://placehold.co/500x350/F0F9FF/333?text=Personalized+Dashboard" alt="Dashboard screenshot" class="rounded-lg shadow-xl">
                     </div>
                     <div class="space-y-8">
                         <div>
-                            <h3 class="text-xl font-semibold mb-2">Personalized Dashboard</h3>
-                            <p class="text-gray-600">Create a free account to track your DBT status, see your quiz progress, and save helpful resources all in one place.</p>
+                            <h3 class="text-xl font-semibold mb-2" data-key="feature1Title">Personalized Dashboard</h3>
+                            <p class="text-gray-600" data-key="feature1Text">Create a free account to track your DBT status, see your quiz progress, and save helpful resources all in one place.</p>
                         </div>
                          <div>
-                            <h3 class="text-xl font-semibold mb-2">Gamified Learning Quiz</h3>
-                            <p class="text-gray-600 mb-4">Take a fun, simple quiz to test your knowledge. Earn a "DBT Champion" certificate to share with your friends!</p>
-                             <button id="startQuizBtn" class="bg-yellow-100 text-yellow-800 font-semibold px-4 py-2 rounded-lg hover:bg-yellow-200">Start Quiz Now</button>
+                            <h3 class="text-xl font-semibold mb-2" data-key="feature2Title">Gamified Learning Quiz</h3>
+                            <p class="text-gray-600 mb-4" data-key="feature2Text">Take a fun, simple quiz to test your knowledge. Earn a "DBT Champion" certificate to share with your friends!</p>
+                             <button id="startQuizBtn" class="bg-yellow-100 text-yellow-800 font-semibold px-4 py-2 rounded-lg hover:bg-yellow-200" data-key="startQuizBtn">Start Quiz Now</button>
                         </div>
                         <div>
-                            <h3 class="text-xl font-semibold mb-2">Aadhaar Dost - Your AI Helper</h3>
-                            <p class="text-gray-600">Our on-site chatbot is available 24/7 to answer your questions instantly. No more waiting or confusion.</p>
+                            <h3 class="text-xl font-semibold mb-2" data-key="feature3Title">Aadhaar Dost - Your AI Helper</h3>
+                            <p class="text-gray-600" data-key="feature3Text">Our on-site chatbot is available 24/7 to answer your questions instantly. No more waiting or confusion.</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Awareness Videos Section -->
+        <section id="videos" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-2" data-key="videosTitle">Watch & Learn</h2>
+                <p class="text-gray-600 mb-12 max-w-2xl mx-auto" data-key="videosSubtitle">Watch these short videos to understand Aadhaar seeding better.</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                    <button class="video-thumb-btn group" data-video="awarness1.mp4">
+                        <div class="relative rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/300x200/3B82F6/FFFFFF?text=Video+1" class="w-full">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                            </div>
+                        </div>
+                        <p class="mt-2 font-semibold" data-key="video1Title">What is DBT?</p>
+                    </button>
+                     <button class="video-thumb-btn group" data-video="awarness2.mp4">
+                        <div class="relative rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/300x200/10B981/FFFFFF?text=Video+2" class="w-full">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                            </div>
+                        </div>
+                        <p class="mt-2 font-semibold" data-key="video2Title">Linking vs Seeding</p>
+                    </button>
+                     <button class="video-thumb-btn group" data-video="awarness3.mp4">
+                        <div class="relative rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/300x200/F59E0B/FFFFFF?text=Video+3" class="w-full">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                            </div>
+                        </div>
+                        <p class="mt-2 font-semibold" data-key="video3Title">How to Seed</p>
+                    </button>
+                    <button class="video-thumb-btn group" data-video="awarness4.mp4">
+                        <div class="relative rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/300x200/EF4444/FFFFFF?text=Video+4" class="w-full">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                            </div>
+                        </div>
+                        <p class="mt-2 font-semibold" data-key="video4Title">Common Myths</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories Section -->
+        <section id="testimonials" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-2" data-key="testimonialsTitle">Success Stories</h2>
+                <p class="text-gray-600 mb-12 max-w-2xl mx-auto" data-key="testimonialsSubtitle">Hear from students who received their scholarships on time.</p>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md text-left">
+                        <p class="text-gray-600 italic mb-4" data-key="testimonial1Text">"I was confused about the whole 'seeding' process. This website explained it clearly, I checked my status, and got my scholarship money without any delay for the first time!"</p>
+                        <p class="font-bold" data-key="testimonial1Author">- Priya S., Engineering Student</p>
+                    </div>
+                     <div class="bg-gray-50 p-8 rounded-xl shadow-md text-left">
+                        <p class="text-gray-600 italic mb-4" data-key="testimonial2Text">"My father used the IVR helpline as he doesn't use the internet. The instructions were simple. We found out my account wasn't seeded and fixed it at the bank the next day. Thank you!"</p>
+                        <p class="font-bold" data-key="testimonial2Author">- Ramesh K., High School Student</p>
                     </div>
                 </div>
             </div>
@@ -156,61 +239,91 @@
         <!-- FAQ Section -->
         <section id="faq" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+                <h2 class="text-3xl font-bold mb-12 text-center" data-key="faqTitle">Frequently Asked Questions</h2>
                 <div class="max-w-3xl mx-auto space-y-4" id="faqAccordion">
                     <!-- FAQ Item 1 -->
                     <div class="border rounded-lg">
-                        <button class="faq-question w-full text-left p-4 flex justify-between items-center font-semibold text-gray-800">
+                        <button class="faq-question w-full text-left p-4 flex justify-between items-center font-semibold text-gray-800" data-key="faq1Question">
                             What is the difference between Aadhaar Linking and Seeding?
                             <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div class="faq-answer hidden p-4 pt-0 text-gray-600">
+                        <div class="faq-answer hidden p-4 pt-0 text-gray-600" data-key="faq1Answer">
                             A 'linked' account uses Aadhaar for identity proof (KYC). A 'seeded' account is specifically approved to receive government money (like scholarships) through the Aadhaar payment system managed by NPCI. You MUST seed your account.
                         </div>
                     </div>
                     <!-- FAQ Item 2 -->
                      <div class="border rounded-lg">
-                        <button class="faq-question w-full text-left p-4 flex justify-between items-center font-semibold text-gray-800">
+                        <button class="faq-question w-full text-left p-4 flex justify-between items-center font-semibold text-gray-800" data-key="faq2Question">
                             What documents do I need for seeding?
                             <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div class="faq-answer hidden p-4 pt-0 text-gray-600">
+                        <div class="faq-answer hidden p-4 pt-0 text-gray-600" data-key="faq2Answer">
                            You only need your Aadhaar card and your bank passbook. Visit your bank branch and ask for the 'Aadhaar Seeding and DBT Consent Form'. Fill it out and submit it.
                         </div>
                     </div>
                     <!-- FAQ Item 3 -->
                      <div class="border rounded-lg">
-                        <button class="faq-question w-full text-left p-4 flex justify-between items-center font-semibold text-gray-800">
+                        <button class="faq-question w-full text-left p-4 flex justify-between items-center font-semibold text-gray-800" data-key="faq3Question">
                             Is there any cost for Aadhaar seeding?
                             <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div class="faq-answer hidden p-4 pt-0 text-gray-600">
+                        <div class="faq-answer hidden p-4 pt-0 text-gray-600" data-key="faq3Answer">
                             No, there is absolutely no cost for Aadhaar seeding. It is a free service provided by all banks as per government guidelines.
                         </div>
                     </div>
                     <!-- FAQ Item 4 -->
                     <div class="border rounded-lg">
-                        <button class="faq-question w-full text-left p-4 flex justify-between items-center font-semibold text-gray-800">
+                        <button class="faq-question w-full text-left p-4 flex justify-between items-center font-semibold text-gray-800" data-key="faq4Question">
                            How long does it take to get my account seeded?
                             <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div class="faq-answer hidden p-4 pt-0 text-gray-600">
+                        <div class="faq-answer hidden p-4 pt-0 text-gray-600" data-key="faq4Answer">
                             After you submit the form at the bank, it usually takes 3 to 5 working days for the seeding to be completed and reflected in the NPCI system.
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Resource Center Section -->
+        <section id="resources" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-12" data-key="resourcesTitle">Resource Center</h2>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <a href="#" class="block p-6 bg-blue-50 border border-blue-200 rounded-lg text-left hover:shadow-lg transition">
+                        <h3 class="font-bold text-lg text-blue-800 mb-2" data-key="resource1Title">Download DBT Consent Form</h3>
+                        <p class="text-gray-600" data-key="resource1Text">Get the official Aadhaar seeding consent form to take to your bank.</p>
+                    </a>
+                    <a href="#" class="block p-6 bg-green-50 border border-green-200 rounded-lg text-left hover:shadow-lg transition">
+                        <h3 class="font-bold text-lg text-green-800 mb-2" data-key="resource2Title">View Official Circular</h3>
+                        <p class="text-gray-600" data-key="resource2Text">Read the official government circular on mandatory Aadhaar seeding for scholarships.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Locator Section -->
+        <section id="locator" class="py-20 bg-white">
+             <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-2" data-key="locatorTitle">Find Help Near You</h2>
+                <p class="text-gray-600 mb-8 max-w-2xl mx-auto" data-key="locatorSubtitle">Find a trained and certified DBT-Sathi in your area for in-person assistance.</p>
+                <div class="max-w-3xl mx-auto bg-white p-4 rounded-lg shadow-lg">
+                    <img src="https://placehold.co/800x400/E0E0E0/333?text=Map+of+Local+DBT-Sathis" alt="Map showing locations of DBT-Sathis" class="rounded-md w-full">
+                </div>
+             </div>
+        </section>
+
+
     </main>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-10">
         <div class="container mx-auto px-6 text-center">
             <p class="font-bold text-lg"><span class="brand-saffron">Adhikaar</span><span class="brand-green">-DBT</span></p>
-            <p class="mt-2 text-gray-400">An initiative by the Ministry of Social Justice and Empowerment.</p>
+            <p class="mt-2 text-gray-400" data-key="footerText">An initiative by the Ministry of Social Justice and Empowerment.</p>
             <div class="mt-4">
-                <a href="#" class="text-gray-400 hover:text-white mx-2">Privacy Policy</a>
-                <a href="#" class="text-gray-400 hover:text-white mx-2">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2" data-key="privacyPolicy">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2" data-key="termsOfService">Terms of Service</a>
             </div>
         </div>
     </footer>
@@ -225,19 +338,19 @@
         <!-- Chat Window -->
         <div id="chatWindow" class="chat-widget hidden absolute bottom-20 right-0 w-80 h-96 bg-white rounded-xl shadow-2xl flex flex-col transform opacity-0 translate-y-4">
             <div class="bg-blue-600 text-white p-4 rounded-t-xl">
-                <h3 class="font-bold text-lg">Aadhaar Dost</h3>
-                <p class="text-sm opacity-80">Your 24/7 AI Assistant</p>
+                <h3 class="font-bold text-lg" data-key="chatbotTitle">Aadhaar Dost</h3>
+                <p class="text-sm opacity-80" data-key="chatbotSubtitle">Your 24/7 AI Assistant</p>
             </div>
             <div id="chatMessages" class="flex-1 p-4 overflow-y-auto">
                 <!-- Bot welcome message -->
                 <div class="mb-3">
-                    <div class="bg-gray-200 text-gray-800 p-2 rounded-lg inline-block max-w-xs">
+                    <div class="bg-gray-200 text-gray-800 p-2 rounded-lg inline-block max-w-xs" data-key="chatbotWelcome">
                         Hello! I am Aadhaar Dost. How can I help you today? Ask me about DBT, Aadhaar Seeding, or scholarships.
                     </div>
                 </div>
             </div>
             <div class="p-2 border-t">
-                <input id="chatInput" type="text" placeholder="Type your message..." class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input id="chatInput" type="text" placeholder="Type your message..." data-key="chatbotInputPlaceholder" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
         </div>
     </div>
@@ -247,19 +360,19 @@
     <div id="loginModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 invisible opacity-0 z-50">
         <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-md relative">
             <button id="closeLoginModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
-            <h2 class="text-2xl font-bold mb-6 text-center">Login to Your Dashboard</h2>
-            <form>
+            <h2 class="text-2xl font-bold mb-6 text-center" data-key="loginModalTitle">Login to Your Dashboard</h2>
+            <form id="loginForm">
                 <div class="mb-4">
-                    <label for="email" class="block text-gray-700 mb-1">Email or Phone</label>
-                    <input type="text" id="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email or phone">
+                    <label for="email" class="block text-gray-700 mb-1" data-key="loginEmailLabel">Email or Phone</label>
+                    <input type="text" id="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email or phone" required>
                 </div>
                 <div class="mb-6">
-                    <label for="password" class="block text-gray-700 mb-1">Password</label>
-                    <input type="password" id="password" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your password">
+                    <label for="password" class="block text-gray-700 mb-1" data-key="loginPasswordLabel">Password</label>
+                    <input type="password" id="password" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your password" required>
                 </div>
-                <button type="submit" class="w-full btn-primary text-white font-bold py-2 px-4 rounded-lg">Login</button>
+                <button type="submit" class="w-full btn-primary text-white font-bold py-2 px-4 rounded-lg" data-key="loginBtnModal">Login</button>
                 <p class="text-center text-sm text-gray-600 mt-4">
-                    Don't have an account? <a href="#" class="text-blue-600 font-semibold">Register here</a>
+                    <span data-key="loginNoAccount">Don't have an account?</span> <a href="#" class="text-blue-600 font-semibold" data-key="loginRegisterLink">Register here</a>
                 </p>
             </form>
         </div>
@@ -270,14 +383,14 @@
         <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-md relative">
              <button id="closeStatusModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
             <div id="statusInitial">
-                <h2 class="text-2xl font-bold mb-6 text-center">Check DBT Seeding Status</h2>
-                <p class="text-center text-gray-600 mb-4">Enter your 12-digit Aadhaar number to check if it's seeded with your bank for DBT.</p>
+                <h2 class="text-2xl font-bold mb-6 text-center" data-key="statusModalTitle">Check DBT Seeding Status</h2>
+                <p class="text-center text-gray-600 mb-4" data-key="statusModalSubtitle">Enter your 12-digit Aadhaar number to check if it's seeded with your bank for DBT.</p>
                 <form id="statusCheckForm">
                     <div class="mb-4">
-                        <label for="aadhaar" class="block text-gray-700 mb-1">Aadhaar Number</label>
+                        <label for="aadhaar" class="block text-gray-700 mb-1" data-key="statusAadhaarLabel">Aadhaar Number</label>
                         <input type="text" id="aadhaar" class="w-full px-3 py-2 border rounded-lg text-center tracking-widest focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="XXXX XXXX XXXX" maxlength="14">
                     </div>
-                    <button type="submit" class="w-full btn-primary text-white font-bold py-2 px-4 rounded-lg">Check Status</button>
+                    <button type="submit" class="w-full btn-primary text-white font-bold py-2 px-4 rounded-lg" data-key="statusCheckBtn">Check Status</button>
                 </form>
             </div>
              <div id="statusResult" class="hidden text-center">
@@ -291,7 +404,7 @@
         <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-lg relative">
              <button id="closeQuizModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
             <div id="quizContainer">
-                <h2 class="text-2xl font-bold mb-4 text-center">DBT Champion Quiz</h2>
+                <h2 class="text-2xl font-bold mb-4 text-center" data-key="quizModalTitle">DBT Champion Quiz</h2>
                 <div id="quizQuestion" class="text-lg font-semibold mb-4"></div>
                 <div id="quizOptions" class="space-y-3"></div>
                 <div id="quizFeedback" class="mt-4 text-center font-semibold"></div>
@@ -299,8 +412,409 @@
         </div>
     </div>
 
+    <!-- Dashboard Modal -->
+    <div id="dashboardModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 invisible opacity-0 z-50">
+        <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-lg relative">
+            <button id="closeDashboardModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            <h2 class="text-2xl font-bold mb-6" data-key="dashboardTitle">Welcome to your Dashboard!</h2>
+            <div class="space-y-4">
+                <div class="p-4 bg-blue-50 rounded-lg">
+                    <h3 class="font-semibold" data-key="dashboardStatusTitle">DBT Seeding Status</h3>
+                    <p class="text-green-600 font-bold" data-key="dashboardStatusText">✓ Verified & Ready</p>
+                </div>
+                 <div class="p-4 bg-yellow-50 rounded-lg">
+                    <h3 class="font-semibold" data-key="dashboardQuizTitle">DBT Champion Quiz</h3>
+                    <p class="text-yellow-800 font-bold" data-key="dashboardQuizText">🏆 Certificate Earned!</p>
+                </div>
+                 <div class="p-4 bg-gray-100 rounded-lg">
+                    <h3 class="font-semibold" data-key="dashboardResourcesTitle">My Resources</h3>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>DBT Consent Form.pdf</li>
+                        <li>Official Circular.pdf</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scholarship Finder Modal -->
+    <div id="scholarshipModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 invisible opacity-0 z-50">
+        <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-lg relative">
+            <button id="closeScholarshipModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            <div id="scholarshipInitial">
+                <h2 class="text-2xl font-bold mb-6 text-center" data-key="scholarshipModalTitle">Find Your Scholarship</h2>
+                <form id="scholarshipForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="state" class="block text-gray-700 mb-1" data-key="scholarshipState">State</label>
+                        <select id="state" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option data-key="scholarshipSelectState">Select State</option>
+                            <option>Gujarat</option>
+                            <option>Maharashtra</option>
+                            <option>Rajasthan</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="caste" class="block text-gray-700 mb-1" data-key="scholarshipCategory">Caste Category</label>
+                         <select id="caste" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option data-key="scholarshipSelectCategory">Select Category</option>
+                            <option>SC</option>
+                            <option>ST</option>
+                            <option>OBC</option>
+                            <option>General</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="disability" class="block text-gray-700 mb-1" data-key="scholarshipDisability">Disability Status</label>
+                        <select id="disability" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option data-key="scholarshipSelectStatus">Select Status</option>
+                            <option>None</option>
+                            <option>Yes (>40%)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="course" class="block text-gray-700 mb-1" data-key="scholarshipCourse">Course Level</label>
+                        <select id="course" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option data-key="scholarshipSelectLevel">Select Level</option>
+                            <option>Post-Matric (Class 11-12)</option>
+                            <option>Undergraduate</option>
+                            <option>Postgraduate</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <button type="submit" class="w-full btn-primary text-white font-bold py-2 px-4 rounded-lg mt-4" data-key="scholarshipFindBtn">Find Scholarships</button>
+                    </div>
+                </form>
+            </div>
+            <div id="scholarshipResult" class="hidden text-center">
+                 <h2 class="text-2xl font-bold mb-4 text-center" data-key="scholarshipResultTitle">Eligible Scholarships</h2>
+                 <p class="text-gray-600" data-key="scholarshipResultSubtitle">Based on your selection, here are some scholarships you may be eligible for:</p>
+                 <ul class="mt-4 text-left list-disc list-inside bg-gray-50 p-4 rounded-lg">
+                    <li>Post-Matric Scholarship for SC Students</li>
+                    <li>National Fellowship for ST Students</li>
+                 </ul>
+                 <p class="mt-4 text-sm text-gray-500" data-key="scholarshipResultDisclaimer">This is a simulation. Please visit the National Scholarship Portal for official information.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Video Player Modal -->
+    <div id="videoPlayerModal" class="modal fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 invisible opacity-0 z-50">
+        <div class="bg-black rounded-lg shadow-xl w-full max-w-3xl relative">
+            <button id="closeVideoPlayerModal" class="absolute -top-2 -right-2 text-white bg-gray-800 rounded-full w-8 h-8 flex items-center justify-center text-lg z-10">&times;</button>
+            <div class="aspect-w-16 aspect-h-9">
+                <video id="videoPlayer" class="w-full h-full rounded-lg" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
 
     <script>
+        const translations = {
+            en: {
+                navFeatures: "Features",
+                navVideos: "Videos",
+                navFaq: "FAQ",
+                navFindHelp: "Find Help",
+                navScholarships: "Scholarships",
+                loginRegisterBtn: "Login/Register",
+                heroTitle: "Don't let bank issues delay your scholarship.",
+                heroSubtitle: "Project Adhikaar-DBT helps you ensure your bank account is ready for Direct Benefit Transfer (DBT), so you get your money on time, every time.",
+                checkStatusBtnHero: "Check Your DBT Status Now",
+                howItWorksTitle: "A Simple 3-Step Process",
+                howItWorksSubtitle: "We make it easy to understand and verify your account status.",
+                step1Title: "1. Learn & Understand",
+                step1Text: "Use our simple guides and chatbot, Aadhaar Dost, to learn the difference between a linked and a DBT-seeded account.",
+                step2Title: "2. Check Your Status",
+                step2Text: "Use our 1-Click tool to instantly check if your bank account is correctly seeded for DBT payments.",
+                step3Title: "3. Get Help",
+                step3Text: "If there's an issue, we'll guide you on the next steps and help you find a local DBT-Sathi for in-person assistance.",
+                featuresTitle: "Powerful Tools for Every Student",
+                feature1Title: "Personalized Dashboard",
+                feature1Text: "Create a free account to track your DBT status, see your quiz progress, and save helpful resources all in one place.",
+                feature2Title: "Gamified Learning Quiz",
+                feature2Text: "Take a fun, simple quiz to test your knowledge. Earn a 'DBT Champion' certificate to share with your friends!",
+                startQuizBtn: "Start Quiz Now",
+                feature3Title: "Aadhaar Dost - Your AI Helper",
+                feature3Text: "Our on-site chatbot is available 24/7 to answer your questions instantly. No more waiting or confusion.",
+                videosTitle: "Watch & Learn",
+                videosSubtitle: "Watch these short videos to understand Aadhaar seeding better.",
+                video1Title: "What is DBT?",
+                video2Title: "Linking vs Seeding",
+                video3Title: "How to Seed",
+                video4Title: "Common Myths",
+                testimonialsTitle: "Success Stories",
+                testimonialsSubtitle: "Hear from students who received their scholarships on time.",
+                testimonial1Text: "\"I was confused about the whole 'seeding' process. This website explained it clearly, I checked my status, and got my scholarship money without any delay for the first time!\"",
+                testimonial1Author: "- Priya S., Engineering Student",
+                testimonial2Text: "\"My father used the IVR helpline as he doesn't use the internet. The instructions were simple. We found out my account wasn't seeded and fixed it at the bank the next day. Thank you!\"",
+                testimonial2Author: "- Ramesh K., High School Student",
+                faqTitle: "Frequently Asked Questions",
+                faq1Question: "What is the difference between Aadhaar Linking and Seeding?",
+                faq1Answer: "A 'linked' account uses Aadhaar for identity proof (KYC). A 'seeded' account is specifically approved to receive government money (like scholarships) through the Aadhaar payment system managed by NPCI. You MUST seed your account.",
+                faq2Question: "What documents do I need for seeding?",
+                faq2Answer: "You only need your Aadhaar card and your bank passbook. Visit your bank branch and ask for the 'Aadhaar Seeding and DBT Consent Form'. Fill it out and submit it.",
+                faq3Question: "Is there any cost for Aadhaar seeding?",
+                faq3Answer: "No, there is absolutely no cost for Aadhaar seeding. It is a free service provided by all banks as per government guidelines.",
+                faq4Question: "How long does it take to get my account seeded?",
+                faq4Answer: "After you submit the form at the bank, it usually takes 3 to 5 working days for the seeding to be completed and reflected in the NPCI system.",
+                resourcesTitle: "Resource Center",
+                resource1Title: "Download DBT Consent Form",
+                resource1Text: "Get the official Aadhaar seeding consent form to take to your bank.",
+                resource2Title: "View Official Circular",
+                resource2Text: "Read the official government circular on mandatory Aadhaar seeding for scholarships.",
+                locatorTitle: "Find Help Near You",
+                locatorSubtitle: "Find a trained and certified DBT-Sathi in your area for in-person assistance.",
+                footerText: "An initiative by the Ministry of Social Justice and Empowerment.",
+                privacyPolicy: "Privacy Policy",
+                termsOfService: "Terms of Service",
+                chatbotTitle: "Aadhaar Dost",
+                chatbotSubtitle: "Your 24/7 AI Assistant",
+                chatbotWelcome: "Hello! I am Aadhaar Dost. How can I help you today? Ask me about DBT, Aadhaar Seeding, or scholarships.",
+                chatbotInputPlaceholder: "Type your message...",
+                loginModalTitle: "Login to Your Dashboard",
+                loginEmailLabel: "Email or Phone",
+                loginPasswordLabel: "Password",
+                loginBtnModal: "Login",
+                loginNoAccount: "Don't have an account?",
+                loginRegisterLink: "Register here",
+                statusModalTitle: "Check DBT Seeding Status",
+                statusModalSubtitle: "Enter your 12-digit Aadhaar number to check if it's seeded with your bank for DBT.",
+                statusAadhaarLabel: "Aadhaar Number",
+                statusCheckBtn: "Check Status",
+                quizModalTitle: "DBT Champion Quiz",
+                dashboardTitle: "Welcome to your Dashboard!",
+                dashboardStatusTitle: "DBT Seeding Status",
+                dashboardStatusText: "✓ Verified & Ready",
+                dashboardQuizTitle: "DBT Champion Quiz",
+                dashboardQuizText: "🏆 Certificate Earned!",
+                dashboardResourcesTitle: "My Resources",
+                scholarshipModalTitle: "Find Your Scholarship",
+                scholarshipState: "State",
+                scholarshipSelectState: "Select State",
+                scholarshipCategory: "Caste Category",
+                scholarshipSelectCategory: "Select Category",
+                scholarshipDisability: "Disability Status",
+                scholarshipSelectStatus: "Select Status",
+                scholarshipCourse: "Course Level",
+                scholarshipSelectLevel: "Select Level",
+                scholarshipFindBtn: "Find Scholarships",
+                scholarshipResultTitle: "Eligible Scholarships",
+                scholarshipResultSubtitle: "Based on your selection, here are some scholarships you may be eligible for:",
+                scholarshipResultDisclaimer: "This is a simulation. Please visit the National Scholarship Portal for official information."
+            },
+            hi: {
+                navFeatures: "विशेषताएँ",
+                navVideos: "वीडियो",
+                navFaq: "अक्सर पूछे जाने वाले प्रश्न",
+                navFindHelp: "मदद लें",
+                navScholarships: "छात्रवृत्ति",
+                loginRegisterBtn: "लॉगिन/रजिस्टर",
+                heroTitle: "बैंक समस्याओं को अपनी छात्रवृत्ति में देरी न करने दें।",
+                heroSubtitle: "परियोजना अधिकार-डीबीटी यह सुनिश्चित करने में मदद करती है कि आपका बैंक खाता प्रत्यक्ष लाभ हस्तांतरण (डीबीटी) के लिए तैयार है, ताकि आपको अपना पैसा हर बार समय पर मिले।",
+                checkStatusBtnHero: "अपनी डीबीटी स्थिति अभी जांचें",
+                howItWorksTitle: "एक सरल 3-चरणीय प्रक्रिया",
+                howItWorksSubtitle: "हम आपके खाते की स्थिति को समझना और सत्यापित करना आसान बनाते हैं।",
+                step1Title: "1. सीखें और समझें",
+                step1Text: "लिंक्ड और डीबीटी-सीडेड खाते के बीच अंतर जानने के लिए हमारे सरल गाइड और चैटबॉट, आधार दोस्त का उपयोग करें।",
+                step2Title: "2. अपनी स्थिति जांचें",
+                step2Text: "यह तुरंत जांचने के लिए हमारे 1-क्लिक टूल का उपयोग करें कि क्या आपका बैंक खाता डीबीटी भुगतान के लिए सही ढंग से सीड किया गया है।",
+                step3Title: "3. मदद पाएं",
+                step3Text: "यदि कोई समस्या है, तो हम आपको अगले चरणों पर मार्गदर्शन देंगे और व्यक्तिगत सहायता के लिए स्थानीय डीबीटी-साथी खोजने में आपकी सहायता करेंगे।",
+                featuresTitle: "हर छात्र के लिए शक्तिशाली उपकरण",
+                feature1Title: "व्यक्तिगत डैशबोर्ड",
+                feature1Text: "अपनी डीबीटी स्थिति को ट्रैक करने, अपनी प्रश्नोत्तरी प्रगति देखने और सहायक संसाधनों को एक ही स्थान पर सहेजने के लिए एक निःशुल्क खाता बनाएं।",
+                feature2Title: "गेमिफाइड लर्निंग क्विज़",
+                feature2Text: "अपने ज्ञान का परीक्षण करने के लिए एक मजेदार, सरल प्रश्नोत्तरी लें। अपने दोस्तों के साथ साझा करने के लिए 'डीबीटी चैंपियन' प्रमाणपत्र अर्जित करें!",
+                startQuizBtn: "प्रश्नोत्तरी अभी शुरू करें",
+                feature3Title: "आधार दोस्त - आपका AI सहायक",
+                feature3Text: "हमारा ऑन-साइट चैटबॉट आपके प्रश्नों का तुरंत उत्तर देने के लिए 24/7 उपलब्ध है। अब और इंतजार या भ्रम नहीं।",
+                videosTitle: "देखें और सीखें",
+                videosSubtitle: "आधार सीडिंग को बेहतर ढंग से समझने के लिए ये छोटे वीडियो देखें।",
+                video1Title: "डीबीटी क्या है?",
+                video2Title: "लिंकिंग बनाम सीडिंग",
+                video3Title: "कैसे सीड करें",
+                video4Title: "आम मिथक",
+                testimonialsTitle: "सफलता की कहानियाँ",
+                testimonialsSubtitle: "उन छात्रों से सुनें जिन्हें समय पर छात्रवृत्ति मिली।",
+                testimonial1Text: "\"मैं पूरी 'सीडिंग' प्रक्रिया को लेकर भ्रमित थी। इस वेबसाइट ने इसे स्पष्ट रूप से समझाया, मैंने अपनी स्थिति की जाँच की, और पहली बार बिना किसी देरी के अपनी छात्रवृत्ति राशि प्राप्त की!\"",
+                testimonial1Author: "- प्रिया एस., इंजीनियरिंग छात्रा",
+                testimonial2Text: "\"मेरे पिता ने आईवीआर हेल्पलाइन का इस्तेमाल किया क्योंकि वह इंटरनेट का उपयोग नहीं करते हैं। निर्देश सरल थे। हमें पता चला कि मेरा खाता सीड नहीं था और अगले दिन बैंक में इसे ठीक करवा लिया। धन्यवाद!\"",
+                testimonial2Author: "- रमेश के., हाई स्कूल छात्र",
+                faqTitle: "अक्सर पूछे जाने वाले प्रश्न",
+                faq1Question: "आधार लिंकिंग और सीडिंग में क्या अंतर है?",
+                faq1Answer: "एक 'लिंक्ड' खाता पहचान प्रमाण (केवाईसी) के लिए आधार का उपयोग करता है। एक 'सीडेड' खाता विशेष रूप से एनपीसीआई द्वारा प्रबंधित आधार भुगतान प्रणाली के माध्यम से सरकारी धन (जैसे छात्रवृत्ति) प्राप्त करने के लिए अनुमोदित है। आपको अपना खाता सीड करना होगा।",
+                faq2Question: "सीडिंग के लिए मुझे किन दस्तावेजों की आवश्यकता है?",
+                faq2Answer: "आपको केवल अपने आधार कार्ड और अपनी बैंक पासबुक की आवश्यकता है। अपनी बैंक शाखा में जाएं और 'आधार सीडिंग और डीबीटी सहमति फॉर्म' मांगें। इसे भरें और जमा करें।",
+                faq3Question: "क्या आधार सीडिंग के लिए कोई शुल्क है?",
+                faq3Answer: "नहीं, आधार सीडिंग के लिए बिल्कुल कोई शुल्क नहीं है। यह सरकारी दिशानिर्देशों के अनुसार सभी बैंकों द्वारा प्रदान की जाने वाली एक निःशुल्क सेवा है।",
+                faq4Question: "मेरे खाते को सीड होने में कितना समय लगता है?",
+                faq4Answer: "बैंक में फॉर्म जमा करने के बाद, सीडिंग को पूरा होने और एनपीसीआई प्रणाली में प्रतिबिंबित होने में आमतौर पर 3 से 5 कार्य दिवस लगते हैं।",
+                resourcesTitle: "संसाधन केंद्र",
+                resource1Title: "डीबीटी सहमति फॉर्म डाउनलोड करें",
+                resource1Text: "अपने बैंक में ले जाने के लिए आधिकारिक आधार सीडिंग सहमति फॉर्म प्राप्त करें।",
+                resource2Title: "आधिकारिक परिपत्र देखें",
+                resource2Text: "छात्रवृत्ति के लिए अनिवार्य आधार सीडिंग पर आधिकारिक सरकारी परिपत्र पढ़ें।",
+                locatorTitle: "अपने पास सहायता खोजें",
+                locatorSubtitle: "व्यक्तिगत सहायता के लिए अपने क्षेत्र में एक प्रशिक्षित और प्रमाणित डीबीटी-साथी खोजें।",
+                footerText: "सामाजिक न्याय और अधिकारिता मंत्रालय की एक पहल।",
+                privacyPolicy: "गोपनीयता नीति",
+                termsOfService: "सेवा की शर्तें",
+                chatbotTitle: "आधार दोस्त",
+                chatbotSubtitle: "आपका 24/7 AI सहायक",
+                chatbotWelcome: "नमस्ते! मैं आधार दोस्त हूँ। आज मैं आपकी कैसे मदद कर सकता हूँ? मुझसे डीबीटी, आधार सीडिंग, या छात्रवृत्ति के बारे में पूछें।",
+                chatbotInputPlaceholder: "अपना संदेश टाइप करें...",
+                loginModalTitle: "अपने डैशबोर्ड पर लॉगिन करें",
+                loginEmailLabel: "ईमेल या फ़ोन",
+                loginPasswordLabel: "पासवर्ड",
+                loginBtnModal: "लॉगिन",
+                loginNoAccount: "खाता नहीं है?",
+                loginRegisterLink: "यहां रजिस्टर करें",
+                statusModalTitle: "डीबीटी सीडिंग स्थिति जांचें",
+                statusModalSubtitle: "यह जांचने के लिए अपना 12 अंकों का आधार नंबर दर्ज करें कि क्या यह डीबीटी के लिए आपके बैंक से सीड है।",
+                statusAadhaarLabel: "आधार संख्या",
+                statusCheckBtn: "स्थिति जांचें",
+                quizModalTitle: "डीबीटी चैंपियन क्विज",
+                dashboardTitle: "आपके डैशबोर्ड में आपका स्वागत है!",
+                dashboardStatusTitle: "डीबीटी सीडिंग स्थिति",
+                dashboardStatusText: "✓ सत्यापित और तैयार",
+                dashboardQuizTitle: "डीबीटी चैंपियन क्विज",
+                dashboardQuizText: "🏆 प्रमाणपत्र अर्जित!",
+                dashboardResourcesTitle: "मेरे संसाधन",
+                scholarshipModalTitle: "अपनी छात्रवृत्ति खोजें",
+                scholarshipState: "राज्य",
+                scholarshipSelectState: "राज्य चुनें",
+                scholarshipCategory: "जाति श्रेणी",
+                scholarshipSelectCategory: "श्रेणी चुनें",
+                scholarshipDisability: "विकलांगता की स्थिति",
+                scholarshipSelectStatus: "स्थिति चुनें",
+                scholarshipCourse: "पाठ्यक्रम स्तर",
+                scholarshipSelectLevel: "स्तर चुनें",
+                scholarshipFindBtn: "छात्रवृत्ति खोजें",
+                scholarshipResultTitle: "पात्र छात्रवृत्ति",
+                scholarshipResultSubtitle: "आपके चयन के आधार पर, यहां कुछ छात्रवृत्तियां हैं जिनके लिए आप पात्र हो सकते हैं:",
+                scholarshipResultDisclaimer: "यह एक सिमुलेशन है। आधिकारिक जानकारी के लिए कृपया राष्ट्रीय छात्रवृत्ति पोर्टल पर जाएं।"
+            },
+            ta: {
+                navFeatures: "அம்சங்கள்",
+                navVideos: "காணொளிகள்",
+                navFaq: "அடிக்கடி கேட்கப்படும் கேள்விகள்",
+                navFindHelp: "உதவி தேடு",
+                navScholarships: "கல்வி உதவித்தொகை",
+                loginRegisterBtn: "உள்நுழை/பதிவு",
+                heroTitle: "வங்கிச் சிக்கல்கள் உங்கள் கல்வி உதவித்தொகையை தாமதப்படுத்த வேண்டாம்.",
+                heroSubtitle: "திட்டம் அதிகார்-டிபிடி உங்கள் வங்கிக் கணக்கு நேரடிப் பலன் பரிமாற்றத்திற்கு (டிபிடி) தயாராக இருப்பதை உறுதிசெய்ய உதவுகிறது, எனவே உங்கள் பணத்தை ஒவ்வொரு முறையும் சரியான நேரத்தில் பெறுவீர்கள்.",
+                checkStatusBtnHero: "உங்கள் டிபிடி நிலையை இப்போது சரிபார்க்கவும்",
+                howItWorksTitle: "ஒரு எளிய 3-படி செயல்முறை",
+                howItWorksSubtitle: "உங்கள் கணக்கு நிலையை நாங்கள் புரிந்துகொள்வதையும் சரிபார்ப்பதையும் எளிதாக்குகிறோம்.",
+                step1Title: "1. கற்று & புரிந்துகொள்",
+                step1Text: "இணைக்கப்பட்ட மற்றும் டிபிடி-விதைக்கப்பட்ட கணக்கிற்கு இடையே உள்ள வித்தியாசத்தை அறிய எங்கள் எளிய வழிகாட்டிகள் மற்றும் அரட்டை боட், ஆதார் தோஸ்தைப் பயன்படுத்தவும்.",
+                step2Title: "2. உங்கள் நிலையைச் சரிபார்க்கவும்",
+                step2Text: "டிபிடி கொடுப்பனவுகளுக்கு உங்கள் வங்கிக் கணக்கு சரியாக விதைக்கப்பட்டுள்ளதா என்பதை உடனடியாகச் சரிபார்க்க எங்கள் 1-கிளிக் கருவியைப் பயன்படுத்தவும்.",
+                step3Title: "3. உதவி பெறு",
+                step3Text: "ஏதேனும் சிக்கல் இருந்தால், அடுத்த கட்டங்களில் நாங்கள் உங்களுக்கு வழிகாட்டுவோம் மற்றும் நேரில் உதவிக்கு உள்ளூர் டிபிடி-சாத்தியைக் கண்டறிய உதவுவோம்.",
+                featuresTitle: "ஒவ்வொரு மாணவருக்கும் சக்திவாய்ந்த கருவிகள்",
+                feature1Title: "தனிப்பயனாக்கப்பட்ட டாஷ்போர்டு",
+                feature1Text: "உங்கள் டிபிடி நிலையை அறிய, உங்கள் வினாடி வினா முன்னேற்றத்தைக் காண மற்றும் உதவிகரமான ஆதாரங்களை ஒரே இடத்தில் சேமிக்க ஒரு இலவசக் கணக்கை உருவாக்கவும்.",
+                feature2Title: "விளையாட்டு கற்றல் வினாடி வினா",
+                feature2Text: "உங்கள் அறிவைச் சோதிக்க ஒரு வேடிக்கையான, எளிய வினாடி வினாவை எடுங்கள். உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ள 'டிபிடி சாம்பியன்' சான்றிதழைப் பெறுங்கள்!",
+                startQuizBtn: "இப்போதே வினாடி வினாவைத் தொடங்கு",
+                feature3Title: "ஆதார் தோஸ்த் - உங்கள் AI உதவியாளர்",
+                feature3Text: "எங்கள் ஆன்-சைட் அரட்டை боட் உங்கள் கேள்விகளுக்கு உடனடியாக பதிலளிக்க 24/7 கிடைக்கும். இனி காத்திருக்கவோ குழப்பமோ வேண்டாம்.",
+                videosTitle: "பார் & கற்றுக்கொள்",
+                videosSubtitle: "ஆதார் விதைப்பை நன்கு புரிந்துகொள்ள இந்த குறுகிய வீடியோக்களைப் பாருங்கள்.",
+                video1Title: "டிபிடி என்றால் என்ன?",
+                video2Title: "இணைத்தல் மற்றும் விதைத்தல்",
+                video3Title: "விதைப்பது எப்படி",
+                video4Title: "பொதுவான கட்டுக்கதைகள்",
+                testimonialsTitle: "வெற்றிக் கதைகள்",
+                testimonialsSubtitle: "சரியான நேரத்தில் கல்வி உதவித்தொகை பெற்ற மாணவர்களிடமிருந்து கேளுங்கள்.",
+                testimonial1Text: "\"முழு 'விதைத்தல்' செயல்முறை குறித்தும் நான் குழப்பமடைந்தேன். இந்த இணையதளம் அதைத் தெளிவாக விளக்கியது, நான் என் நிலையைச் சரிபார்த்தேன், முதல் முறையாக எந்தத் தாமதமும் இல்லாமல் என் கல்வி உதவித்தொகைப் பணத்தைப் பெற்றேன்!\"",
+                testimonial1Author: "- பிரியா எஸ்., பொறியியல் மாணவி",
+                testimonial2Text: "\"என் தந்தை இணையத்தைப் பயன்படுத்தாததால் ஐவிஆர் ஹெல்ப்லைனைப் பயன்படுத்தினார். வழிமுறைகள் எளிமையாக இருந்தன. என் கணக்கு விதைக்கப்படவில்லை என்பதைக் கண்டுபிடித்து அடுத்த நாள் வங்கியில் சரிசெய்தோம். நன்றி!\"",
+                testimonial2Author: "- ரமேஷ் கே., உயர்நிலைப் பள்ளி மாணவர்",
+                faqTitle: "அடிக்கடி கேட்கப்படும் கேள்விகள்",
+                faq1Question: "ஆதார் இணைத்தல் மற்றும் விதைத்தல் ஆகியவற்றுக்கு என்ன வித்தியாசம்?",
+                faq1Answer: "ஒரு 'இணைக்கப்பட்ட' கணக்கு அடையாளச் சான்றுகளுக்கு (KYC) ஆதாரைப் பயன்படுத்துகிறது. ஒரு 'விதைக்கப்பட்ட' கணக்கு என்பது என்பிசிஐயால் நிர்வகிக்கப்படும் ஆதார் கட்டண முறை மூலம் அரசாங்கப் பணத்தை (கல்வி உதவித்தொகை போன்றவை) பெற பிரத்யேகமாக அங்கீகரிக்கப்பட்டுள்ளது. உங்கள் கணக்கை நீங்கள் விதைக்க வேண்டும்.",
+                faq2Question: "விதைப்பதற்கு எனக்கு என்ன ஆவணங்கள் தேவை?",
+                faq2Answer: "உங்களுக்கு உங்கள் ஆதார் அட்டை மற்றும் உங்கள் வங்கி பாஸ்புக் மட்டுமே தேவை. உங்கள் வங்கிக் கிளைக்குச் சென்று 'ஆதார் விதைத்தல் மற்றும் டிபிடி ஒப்புதல் படிவம்' கேட்கவும். அதை நிரப்பி சமர்ப்பிக்கவும்.",
+                faq3Question: "ஆதார் விதைப்புக்கு ஏதேனும் கட்டணம் உண்டா?",
+                faq3Answer: "இல்லை, ஆதார் விதைப்புக்கு முற்றிலும் எந்தக் கட்டணமும் இல்லை. இது அரசாங்க வழிகாட்டுதல்களின்படி அனைத்து வங்கிகளாலும் வழங்கப்படும் ஒரு இலவச சேவையாகும்.",
+                faq4Question: "என் கணக்கை விதைக்க எவ்வளவு நேரம் ஆகும்?",
+                faq4Answer: "நீங்கள் வங்கியில் படிவத்தை சமர்ப்பித்த பிறகு, விதைப்பு முடிந்து என்பிசிஐ அமைப்பில் பிரதிபலிக்க பொதுவாக 3 முதல் 5 வேலை நாட்கள் ஆகும்.",
+                resourcesTitle: "ஆதார மையம்",
+                resource1Title: "டிபிடி ஒப்புதல் படிவத்தைப் பதிவிறக்கவும்",
+                resource1Text: "உங்கள் வங்கிக்கு எடுத்துச் செல்ல அதிகாரப்பூர்வ ஆதார் விதைப்பு ஒப்புதல் படிவத்தைப் பெறுங்கள்.",
+                resource2Title: "அதிகாரப்பூர்வ சுற்றறிக்கையைக் காண்க",
+                resource2Text: "கல்வி உதவித்தொகைக்கான கட்டாய ஆதார் விதைப்பு குறித்த அதிகாரப்பூர்வ அரசாங்க சுற்றறிக்கையைப் படியுங்கள்.",
+                locatorTitle: "உங்களுக்கு அருகில் உதவியைக் கண்டறியவும்",
+                locatorSubtitle: "நேரில் உதவிக்கு உங்கள் பகுதியில் ஒரு பயிற்சி பெற்ற மற்றும் சான்றளிக்கப்பட்ட டிபிடி-சாத்தியைக் கண்டறியவும்.",
+                footerText: "சமூக நீதி மற்றும் அதிகாரமளித்தல் அமைச்சகத்தின் ஒரு முயற்சி.",
+                privacyPolicy: "தனியுரிமைக் கொள்கை",
+                termsOfService: "சேவை விதிமுறைகள்",
+                chatbotTitle: "ஆதார் தோஸ்த்",
+                chatbotSubtitle: "உங்கள் 24/7 AI உதவியாளர்",
+                chatbotWelcome: "வணக்கம்! நான் ஆதார் தோஸ்த். இன்று நான் உங்களுக்கு எப்படி உதவ முடியும்? டிபிடி, ஆதார் விதைத்தல் அல்லது கல்வி உதவித்தொகை பற்றி என்னிடம் கேளுங்கள்.",
+                chatbotInputPlaceholder: "உங்கள் செய்தியைத் தட்டச்சு செய்க...",
+                loginModalTitle: "உங்கள் டாஷ்போர்டில் உள்நுழைக",
+                loginEmailLabel: "மின்னஞ்சல் அல்லது தொலைபேசி",
+                loginPasswordLabel: "கடவுச்சொல்",
+                loginBtnModal: "உள்நுழை",
+                loginNoAccount: "கணக்கு இல்லையா?",
+                loginRegisterLink: "இங்கே பதிவு செய்யுங்கள்",
+                statusModalTitle: "டிபிடி விதைப்பு நிலையைச் சரிபார்க்கவும்",
+                statusModalSubtitle: "டிபிடிக்காக உங்கள் வங்கியுடன் விதைக்கப்பட்டுள்ளதா என்பதைச் சரிபார்க்க உங்கள் 12 இலக்க ஆதார் எண்ணை உள்ளிடவும்.",
+                statusAadhaarLabel: "ஆதார் எண்",
+                statusCheckBtn: "நிலையைச் சரிபார்க்கவும்",
+                quizModalTitle: "டிபிடி சாம்பியன் வினாடி வினா",
+                dashboardTitle: "உங்கள் டாஷ்போர்டுக்கு வரவேற்கிறோம்!",
+                dashboardStatusTitle: "டிபிடி விதைப்பு நிலை",
+                dashboardStatusText: "✓ சரிபார்க்கப்பட்டு தயாராக உள்ளது",
+                dashboardQuizTitle: "டிபிடி சாம்பியன் வினாடி வினா",
+                dashboardQuizText: "🏆 சான்றிதழ் பெறப்பட்டது!",
+                dashboardResourcesTitle: "என் ஆதாரங்கள்",
+                scholarshipModalTitle: "உங்கள் கல்வி உதவித்தொகையைக் கண்டறியவும்",
+                scholarshipState: "மாநிலம்",
+                scholarshipSelectState: "மாநிலத்தைத் தேர்ந்தெடுக்கவும்",
+                scholarshipCategory: "சாதிப் பிரிவு",
+                scholarshipSelectCategory: "பிரிவைத் தேர்ந்தெடுக்கவும்",
+                scholarshipDisability: "இயலாமை நிலை",
+                scholarshipSelectStatus: "நிலையைத் தேர்ந்தெடுக்கவும்",
+                scholarshipCourse: "படிப்பு நிலை",
+                scholarshipSelectLevel: "நிலையைத் தேர்ந்தெடுக்கவும்",
+                scholarshipFindBtn: "கல்வி உதவித்தொகைகளைக் கண்டறியவும்",
+                scholarshipResultTitle: "தகுதியான கல்வி உதவித்தொகைகள்",
+                scholarshipResultSubtitle: "உங்கள் தேர்வின் அடிப்படையில், நீங்கள் தகுதிபெறக்கூடிய சில கல்வி உதவித்தொகைகள் இங்கே:",
+                scholarshipResultDisclaimer: "இது ஒரு உருவகப்படுத்துதல். அதிகாரப்பூர்வ தகவலுக்கு தேசிய கல்வி உதவித்தொகை போர்ட்டலைப் பார்வையிடவும்."
+            }
+        };
+
+        const elementsToTranslate = document.querySelectorAll('[data-key]');
+
+        function changeLanguage(lang) {
+            elementsToTranslate.forEach(element => {
+                const key = element.dataset.key;
+                if (translations[lang] && translations[lang][key]) {
+                    if (element.tagName === 'INPUT' && element.placeholder) {
+                        element.placeholder = translations[lang][key];
+                    } else {
+                        // Handle cases where the element might contain other nodes like the FAQ button's SVG
+                        const childNodes = Array.from(element.childNodes);
+                        const textNode = childNodes.find(node => node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== '');
+                        if(textNode) {
+                           textNode.textContent = translations[lang][key];
+                        } else {
+                           element.textContent = translations[lang][key];
+                        }
+                    }
+                }
+            });
+            // Update quiz data language as well
+            updateQuizLanguage(lang);
+        }
+        
         // --- Mobile Menu ---
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
@@ -313,6 +827,7 @@
         const mobileLoginBtn = document.getElementById('mobileLoginBtn');
         const loginModal = document.getElementById('loginModal');
         const closeLoginModal = document.getElementById('closeLoginModal');
+        const loginForm = document.getElementById('loginForm');
 
         const checkStatusBtn = document.getElementById('checkStatusBtn');
         const statusCheckModal = document.getElementById('statusCheckModal');
@@ -321,7 +836,19 @@
         const startQuizBtn = document.getElementById('startQuizBtn');
         const quizModal = document.getElementById('quizModal');
         const closeQuizModal = document.getElementById('closeQuizModal');
+
+        const dashboardModal = document.getElementById('dashboardModal');
+        const closeDashboardModal = document.getElementById('closeDashboardModal');
+
+        const scholarshipNavBtn = document.getElementById('scholarshipNavBtn');
+        const mobileScholarshipNavBtn = document.getElementById('mobileScholarshipNavBtn');
+        const scholarshipModal = document.getElementById('scholarshipModal');
+        const closeScholarshipModal = document.getElementById('closeScholarshipModal');
         
+        const videoPlayerModal = document.getElementById('videoPlayerModal');
+        const closeVideoPlayerModal = document.getElementById('closeVideoPlayerModal');
+        const videoPlayer = document.getElementById('videoPlayer');
+
         function openModal(modal) {
             modal.classList.remove('invisible', 'opacity-0');
         }
@@ -336,11 +863,16 @@
              openModal(loginModal);
         });
         closeLoginModal.addEventListener('click', () => closeModal(loginModal));
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            closeModal(loginModal);
+            openModal(dashboardModal);
+        });
         
         checkStatusBtn.addEventListener('click', () => openModal(statusCheckModal));
         closeStatusModal.addEventListener('click', () => {
             closeModal(statusCheckModal);
-            // Reset status check UI
             document.getElementById('statusInitial').classList.remove('hidden');
             document.getElementById('statusResult').classList.add('hidden');
             document.getElementById('aadhaar').value = '';
@@ -352,12 +884,56 @@
         });
         closeQuizModal.addEventListener('click', () => closeModal(quizModal));
 
+        closeDashboardModal.addEventListener('click', () => closeModal(dashboardModal));
+
+        scholarshipNavBtn.addEventListener('click', () => openModal(scholarshipModal));
+        mobileScholarshipNavBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            openModal(scholarshipModal);
+        });
+        closeScholarshipModal.addEventListener('click', () => {
+            closeModal(scholarshipModal);
+            document.getElementById('scholarshipInitial').classList.remove('hidden');
+            document.getElementById('scholarshipResult').classList.add('hidden');
+        });
+
+        // --- Video Player Modal Logic ---
+        document.querySelectorAll('.video-thumb-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const videoSrc = button.getAttribute('data-video');
+                videoPlayer.src = videoSrc;
+                openModal(videoPlayerModal);
+                videoPlayer.play();
+            });
+        });
+
+        closeVideoPlayerModal.addEventListener('click', () => {
+            closeModal(videoPlayerModal);
+            videoPlayer.pause();
+            videoPlayer.src = ''; // Unload the video
+        });
+
 
         // Close modals on outside click
         window.addEventListener('click', (e) => {
             if (e.target === loginModal) closeModal(loginModal);
             if (e.target === statusCheckModal) closeModal(statusCheckModal);
             if (e.target === quizModal) closeModal(quizModal);
+            if (e.target === dashboardModal) closeModal(dashboardModal);
+            if (e.target === scholarshipModal) closeModal(scholarshipModal);
+            if (e.target === videoPlayerModal) {
+                 closeModal(videoPlayerModal);
+                 videoPlayer.pause();
+                 videoPlayer.src = '';
+            }
+        });
+
+        // --- Scholarship Form Simulation ---
+        const scholarshipForm = document.getElementById('scholarshipForm');
+        scholarshipForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.getElementById('scholarshipInitial').classList.add('hidden');
+            document.getElementById('scholarshipResult').classList.remove('hidden');
         });
 
         // --- DBT Status Check Simulation ---
@@ -393,7 +969,6 @@
             statusResult.innerHTML = `<div class="text-center p-4">Checking...</div>`;
 
             setTimeout(() => {
-                // Simulate success or failure
                 const isSuccess = Math.random() > 0.3; // 70% chance of success
                 if (isSuccess) {
                     statusResult.innerHTML = `
@@ -433,7 +1008,10 @@
             "npci": "NPCI is the National Payments Corporation of India. They manage the system that sends DBT money to your seeded bank account using your Aadhaar number.",
             "cost": "There is absolutely no cost for Aadhaar seeding. It is a free service provided by all banks.",
             "time": "After you submit the form at the bank, it usually takes 3 to 5 working days for the seeding to be reflected in the system.",
-            "bank refuses": "If the bank staff is unaware or refuses, you can show them the circular from the Finance Ministry regarding DBT seeding. You can also escalate the issue to the bank manager."
+            "bank refuses": "If the bank staff is unaware or refuses, you can show them the circular from the Finance Ministry regarding DBT seeding. You can also escalate the issue to the bank manager.",
+            "joint account": "Yes, you can seed a joint account. However, the student whose name is on the scholarship must be the primary account holder.",
+            "multiple accounts": "You can only seed one bank account for receiving DBT benefits. The last account you seed will become the active one for all government schemes.",
+            "dbt sathi": "A DBT-Sathi is a trained, trusted local volunteer (like an ASHA worker or postman) who can help you understand the process and check your status in person."
         };
 
         chatBubble.addEventListener('click', () => {
@@ -482,6 +1060,9 @@
         }
 
         function getBotResponse(message) {
+            if (message.includes('dbt sathi')) return faqData['dbt sathi'];
+            if (message.includes('joint')) return faqData['joint account'];
+            if (message.includes('multiple') || message.includes('more than one')) return faqData['multiple accounts'];
             if (message.includes('dbt')) return faqData.dbt;
             if (message.includes('seed')) return faqData.seeding;
             if (message.includes('difference') || message.includes('link')) return faqData.difference;
@@ -507,12 +1088,6 @@
                     const icon = question.querySelector('svg');
                     
                     const isHidden = answer.classList.contains('hidden');
-                    // Optional: Close other open answers
-                    // questions.forEach(q => {
-                    //     q.nextElementSibling.classList.add('hidden');
-                    //     q.querySelector('svg').classList.remove('rotate-180');
-                    // });
-
                     if (isHidden) {
                         answer.classList.remove('hidden');
                         icon.classList.add('rotate-180');
@@ -529,27 +1104,83 @@
         const quizQuestionEl = document.getElementById('quizQuestion');
         const quizOptionsEl = document.getElementById('quizOptions');
         const quizFeedbackEl = document.getElementById('quizFeedback');
+        
+        const quizDataSets = {
+            en: [
+                {
+                    question: "What must you do to receive scholarship money directly in your account?",
+                    options: ["Link Aadhaar for KYC", "Seed Aadhaar for DBT", "Open a new account", "Both A and B"],
+                    answer: "Seed Aadhaar for DBT"
+                },
+                {
+                    question: "Is there a fee for Aadhaar Seeding at the bank?",
+                    options: ["Yes, Rs. 50", "Yes, Rs. 100", "No, it's completely free", "Only for private banks"],
+                    answer: "No, it's completely free"
+                },
+                {
+                    question: "Which organization manages the DBT payment system?",
+                    options: ["UIDAI", "Reserve Bank of India", "Ministry of Finance", "NPCI"],
+                    answer: "NPCI"
+                },
+                {
+                    question: "What documents do you need to carry to the bank for seeding?",
+                    options: ["Only Aadhaar Card", "Aadhaar Card & Bank Passbook", "Ration Card", "School ID Card"],
+                    answer: "Aadhaar Card & Bank Passbook"
+                }
+            ],
+            hi: [
+                {
+                    question: "छात्रवृत्ति का पैसा सीधे अपने खाते में प्राप्त करने के लिए आपको क्या करना होगा?",
+                    options: ["केवाईसी के लिए आधार लिंक करें", "डीबीटी के लिए आधार सीड करें", "एक नया खाता खोलें", "ए और बी दोनों"],
+                    answer: "डीबीटी के लिए आधार सीड करें"
+                },
+                {
+                    question: "क्या बैंक में आधार सीडिंग के लिए कोई शुल्क है?",
+                    options: ["हाँ, 50 रुपये", "हाँ, 100 रुपये", "नहीं, यह पूरी तरह से मुफ्त है", "केवल निजी बैंकों के लिए"],
+                    answer: "नहीं, यह पूरी तरह से मुफ्त है"
+                },
+                 {
+                    question: "कौन सा संगठन डीबीटी भुगतान प्रणाली का प्रबंधन करता है?",
+                    options: ["यूआईडीएआई", "भारतीय रिजर्व बैंक", "वित्त मंत्रालय", "एनपीसीआई"],
+                    answer: "एनपीसीआई"
+                },
+                {
+                    question: "सीडिंग के लिए आपको बैंक में कौन से दस्तावेज ले जाने होंगे?",
+                    options: ["केवल आधार कार्ड", "आधार कार्ड और बैंक पासबुक", "राशन कार्ड", "स्कूल आईडी कार्ड"],
+                    answer: "आधार कार्ड और बैंक पासबुक"
+                }
+            ],
+            ta: [
+                {
+                    question: "கல்வி உதவித்தொகை பணத்தை நேரடியாக உங்கள் கணக்கில் பெற நீங்கள் என்ன செய்ய வேண்டும்?",
+                    options: ["KYCக்கு ஆதாரை இணைக்கவும்", "டிபிடிக்கு ஆதாரை விதைக்கவும்", "புதிய கணக்கைத் திறக்கவும்", "A மற்றும் B இரண்டும்"],
+                    answer: "டிபிடிக்கு ஆதாரை விதைக்கவும்"
+                },
+                {
+                    question: " வங்கியில் ஆதார் விதைப்புக்கு கட்டணம் உள்ளதா?",
+                    options: ["ஆம், ரூ. 50", "ஆம், ரூ. 100", "இல்லை, இது முற்றிலும் இலவசம்", "தனியார் வங்கிகளுக்கு மட்டும்"],
+                    answer: "இல்லை, இது முற்றிலும் இலவசம்"
+                },
+                {
+                    question: "டிபிடி கட்டண முறையை நிர்வகிக்கும் அமைப்பு எது?",
+                    options: ["UIDAI", "இந்திய ரிசர்வ் வங்கி", "நிதி அமைச்சகம்", "NPCI"],
+                    answer: "NPCI"
+                },
+                {
+                    question: "விதைப்பதற்காக நீங்கள் வங்கிக்கு என்ன ஆவணங்களை எடுத்துச் செல்ல வேண்டும்?",
+                    options: ["ஆதார் அட்டை மட்டும்", "ஆதார் அட்டை மற்றும் வங்கி பாஸ்புக்", "ரேஷன் கார்டு", "பள்ளி அடையாள அட்டை"],
+                    answer: "ஆதார் அட்டை மற்றும் வங்கி பாஸ்புக்"
+                }
+            ]
+        };
 
-        const quizData = [
-            {
-                question: "What must you do to receive scholarship money directly in your account?",
-                options: ["Link Aadhaar for KYC", "Seed Aadhaar for DBT", "Open a new account", "Both A and B"],
-                answer: "Seed Aadhaar for DBT"
-            },
-            {
-                question: "Is there a fee for Aadhaar Seeding at the bank?",
-                options: ["Yes, Rs. 50", "Yes, Rs. 100", "No, it's completely free", "Only for private banks"],
-                answer: "No, it's completely free"
-            },
-            {
-                question: "Which organization manages the DBT payment system?",
-                options: ["UIDAI", "Reserve Bank of India", "Ministry of Finance", "NPCI"],
-                answer: "NPCI"
-            }
-        ];
-
+        let currentQuizData = quizDataSets.en;
         let currentQuestionIndex = 0;
         let score = 0;
+        
+        function updateQuizLanguage(lang) {
+            currentQuizData = quizDataSets[lang] || quizDataSets.en;
+        }
 
         function startQuiz() {
             currentQuestionIndex = 0;
@@ -559,8 +1190,8 @@
         }
 
         function showQuestion() {
-            if (currentQuestionIndex < quizData.length) {
-                let currentQuestion = quizData[currentQuestionIndex];
+            if (currentQuestionIndex < currentQuizData.length) {
+                let currentQuestion = currentQuizData[currentQuestionIndex];
                 quizQuestionEl.textContent = `Q${currentQuestionIndex + 1}: ${currentQuestion.question}`;
                 quizOptionsEl.innerHTML = '';
                 currentQuestion.options.forEach(option => {
@@ -576,7 +1207,7 @@
         }
 
         function selectAnswer(selectedOption, btn) {
-            let correctAnswer = quizData[currentQuestionIndex].answer;
+            let correctAnswer = currentQuizData[currentQuestionIndex].answer;
             const allOptions = quizOptionsEl.querySelectorAll('button');
             allOptions.forEach(b => b.disabled = true); // Disable all buttons
 
@@ -603,13 +1234,46 @@
             quizQuestionEl.textContent = 'Quiz Complete!';
             quizOptionsEl.innerHTML = `
                 <div class="text-center">
-                    <p class="text-xl">You scored ${score} out of ${quizData.length}!</p>
+                    <p class="text-xl">You scored ${score} out of ${currentQuizData.length}!</p>
                     <p class="text-2xl font-bold mt-4 text-green-600">🎉 You are a DBT Champion! 🎉</p>
                     <button id="restartQuizBtn" class="mt-6 btn-primary text-white font-semibold px-4 py-2 rounded-lg">Try Again</button>
                 </div>
             `;
             document.getElementById('restartQuizBtn').addEventListener('click', startQuiz);
         }
+
+        // --- Language Switcher ---
+        const languageBtn = document.getElementById('languageBtn');
+        const languageDropdown = document.getElementById('languageDropdown');
+        const languageLabel = document.getElementById('languageLabel');
+
+        languageBtn.addEventListener('click', () => {
+            languageDropdown.classList.toggle('hidden');
+        });
+
+        languageDropdown.addEventListener('click', (e) => {
+            e.preventDefault();
+            if(e.target.tagName === 'A'){
+                const lang = e.target.dataset.lang;
+                const langText = e.target.textContent;
+                changeLanguage(lang);
+                languageLabel.textContent = langText;
+                languageDropdown.classList.add('hidden');
+            }
+        });
+
+        // Close dropdown if clicked outside
+        window.addEventListener('click', (e) => {
+            if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
+                languageDropdown.classList.add('hidden');
+            }
+        });
+
+        // Initialize with default language
+        document.addEventListener('DOMContentLoaded', () => {
+            changeLanguage('en');
+        });
+
     </script>
 </body>
 </html>

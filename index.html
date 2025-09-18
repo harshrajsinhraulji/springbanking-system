@@ -380,21 +380,23 @@
 
     <!-- DBT Status Check Modal -->
     <div id="statusCheckModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 invisible opacity-0 z-50">
-        <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-md relative">
+        <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-lg relative">
              <button id="closeStatusModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
             <div id="statusInitial">
-                <h2 class="text-2xl font-bold mb-6 text-center" data-key="statusModalTitle">Check DBT Seeding Status</h2>
-                <p class="text-center text-gray-600 mb-4" data-key="statusModalSubtitle">Enter your 12-digit Aadhaar number to check if it's seeded with your bank for DBT.</p>
-                <form id="statusCheckForm">
-                    <div class="mb-4">
-                        <label for="aadhaar" class="block text-gray-700 mb-1" data-key="statusAadhaarLabel">Aadhaar Number</label>
-                        <input type="text" id="aadhaar" class="w-full px-3 py-2 border rounded-lg text-center tracking-widest focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="XXXX XXXX XXXX" maxlength="14">
-                    </div>
-                    <button type="submit" class="w-full btn-primary text-white font-bold py-2 px-4 rounded-lg" data-key="statusCheckBtn">Check Status</button>
-                </form>
-            </div>
-             <div id="statusResult" class="hidden text-center">
-                <!-- Content will be injected by JS -->
+                <h2 class="text-2xl font-bold mb-4 text-center" data-key="statusModalTitle">Check DBT Seeding Status</h2>
+                <p class="text-center text-gray-600 mb-6" data-key="statusModalInfo">For your security, this check must be done on the official Government of India (UIDAI) website. We will guide you there.</p>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-2" data-key="statusModalInstructionsTitle">Instructions:</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <li data-key="statusModalInstruction1">Click the button below to go to the secure UIDAI portal.</li>
+                        <li data-key="statusModalInstruction2">Enter your 12-digit Aadhaar Number and the security captcha.</li>
+                        <li data-key="statusModalInstruction3">Click 'Send OTP'. You will receive an OTP on the mobile number registered with your Aadhaar.</li>
+                        <li data-key="statusModalInstruction4">Enter the OTP to see your bank seeding status.</li>
+                    </ol>
+                </div>
+                <a href="https://resident.uidai.gov.in/bank-mapper" target="_blank" class="block w-full text-center mt-6 btn-primary text-white font-bold py-3 px-4 rounded-lg" data-key="statusModalBtn">
+                    Go to Official UIDAI Website
+                </a>
             </div>
         </div>
     </div>
@@ -581,9 +583,13 @@
                 loginNoAccount: "Don't have an account?",
                 loginRegisterLink: "Register here",
                 statusModalTitle: "Check DBT Seeding Status",
-                statusModalSubtitle: "Enter your 12-digit Aadhaar number to check if it's seeded with your bank for DBT.",
-                statusAadhaarLabel: "Aadhaar Number",
-                statusCheckBtn: "Check Status",
+                statusModalInfo: "For your security, this check must be done on the official Government of India (UIDAI) website. We will guide you there.",
+                statusModalInstructionsTitle: "Instructions:",
+                statusModalInstruction1: "Click the button below to go to the secure UIDAI portal.",
+                statusModalInstruction2: "Enter your 12-digit Aadhaar Number and the security captcha.",
+                statusModalInstruction3: "Click 'Send OTP'. You will receive an OTP on the mobile number registered with your Aadhaar.",
+                statusModalInstruction4: "Enter the OTP to see your bank seeding status.",
+                statusModalBtn: "Go to Official UIDAI Website",
                 quizModalTitle: "DBT Champion Quiz",
                 dashboardTitle: "Welcome to your Dashboard!",
                 dashboardStatusTitle: "DBT Seeding Status",
@@ -673,9 +679,13 @@
                 loginNoAccount: "खाता नहीं है?",
                 loginRegisterLink: "यहां रजिस्टर करें",
                 statusModalTitle: "डीबीटी सीडिंग स्थिति जांचें",
-                statusModalSubtitle: "यह जांचने के लिए अपना 12 अंकों का आधार नंबर दर्ज करें कि क्या यह डीबीटी के लिए आपके बैंक से सीड है।",
-                statusAadhaarLabel: "आधार संख्या",
-                statusCheckBtn: "स्थिति जांचें",
+                statusModalInfo: "आपकी सुरक्षा के लिए, यह जांच आधिकारिक भारत सरकार (यूआईडीएआई) की वेबसाइट पर की जानी चाहिए। हम आपको वहां मार्गदर्शन करेंगे।",
+                statusModalInstructionsTitle: "निर्देश:",
+                statusModalInstruction1: "सुरक्षित यूआईडीएआई पोर्टल पर जाने के लिए नीचे दिए गए बटन पर क्लिक करें।",
+                statusModalInstruction2: "अपना 12 अंकों का आधार नंबर और सुरक्षा कैप्चा दर्ज करें।",
+                statusModalInstruction3: "'ओटीपी भेजें' पर क्लिक करें। आपको अपने आधार से पंजीकृत मोबाइल नंबर पर एक ओटीपी प्राप्त होगा।",
+                statusModalInstruction4: "अपनी बैंक सीडिंग स्थिति देखने के लिए ओटीपी दर्ज करें।",
+                statusModalBtn: "आधिकारिक यूआईडीएआई वेबसाइट पर जाएं",
                 quizModalTitle: "डीबीटी चैंपियन क्विज",
                 dashboardTitle: "आपके डैशबोर्ड में आपका स्वागत है!",
                 dashboardStatusTitle: "डीबीटी सीडिंग स्थिति",
@@ -765,9 +775,13 @@
                 loginNoAccount: "கணக்கு இல்லையா?",
                 loginRegisterLink: "இங்கே பதிவு செய்யுங்கள்",
                 statusModalTitle: "டிபிடி விதைப்பு நிலையைச் சரிபார்க்கவும்",
-                statusModalSubtitle: "டிபிடிக்காக உங்கள் வங்கியுடன் விதைக்கப்பட்டுள்ளதா என்பதைச் சரிபார்க்க உங்கள் 12 இலக்க ஆதார் எண்ணை உள்ளிடவும்.",
-                statusAadhaarLabel: "ஆதார் எண்",
-                statusCheckBtn: "நிலையைச் சரிபார்க்கவும்",
+                statusModalInfo: "உங்கள் பாதுகாப்பிற்காக, இந்தச் சரிபார்ப்பு அதிகாரப்பூர்வ இந்திய அரசாங்க (UIDAI) இணையதளத்தில் செய்யப்பட வேண்டும். நாங்கள் உங்களுக்கு அங்கு வழிகாட்டுவோம்.",
+                statusModalInstructionsTitle: "வழிமுறைகள்:",
+                statusModalInstruction1: "பாதுகாப்பான UIDAI போர்ட்டலுக்குச் செல்ல கீழே உள்ள பொத்தானைக் கிளிக் செய்யவும்.",
+                statusModalInstruction2: "உங்கள் 12 இலக்க ஆதார் எண் மற்றும் பாதுகாப்பு கேப்ட்சாவை உள்ளிடவும்.",
+                statusModalInstruction3: "'OTP அனுப்பு' என்பதைக் கிளிக் செய்யவும். உங்கள் ஆதாருடன் பதிவுசெய்யப்பட்ட மொபைல் எண்ணுக்கு ஒரு OTPஐப் பெறுவீர்கள்.",
+                statusModalInstruction4: "உங்கள் வங்கி விதைப்பு நிலையைப் பார்க்க OTP ஐ உள்ளிடவும்.",
+                statusModalBtn: "அதிகாரப்பூர்வ UIDAI இணையதளத்திற்குச் செல்லவும்",
                 quizModalTitle: "டிபிடி சாம்பியன் வினாடி வினா",
                 dashboardTitle: "உங்கள் டாஷ்போர்டுக்கு வரவேற்கிறோம்!",
                 dashboardStatusTitle: "டிபிடி விதைப்பு நிலை",
@@ -873,9 +887,6 @@
         checkStatusBtn.addEventListener('click', () => openModal(statusCheckModal));
         closeStatusModal.addEventListener('click', () => {
             closeModal(statusCheckModal);
-            document.getElementById('statusInitial').classList.remove('hidden');
-            document.getElementById('statusResult').classList.add('hidden');
-            document.getElementById('aadhaar').value = '';
         });
         
         startQuizBtn.addEventListener('click', () => {
@@ -934,61 +945,6 @@
             e.preventDefault();
             document.getElementById('scholarshipInitial').classList.add('hidden');
             document.getElementById('scholarshipResult').classList.remove('hidden');
-        });
-
-        // --- DBT Status Check Simulation ---
-        const statusCheckForm = document.getElementById('statusCheckForm');
-        const statusInitial = document.getElementById('statusInitial');
-        const statusResult = document.getElementById('statusResult');
-        const aadhaarInput = document.getElementById('aadhaar');
-
-        // Format Aadhaar input with spaces
-        aadhaarInput.addEventListener('input', (e) => {
-            let val = e.target.value.replace(/\s/g, '');
-            let formattedVal = '';
-            for(let i = 0; i < val.length; i++) {
-                if (i > 0 && i % 4 === 0) {
-                    formattedVal += ' ';
-                }
-                formattedVal += val[i];
-            }
-            e.target.value = formattedVal;
-        });
-
-        statusCheckForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const aadhaarNumber = aadhaarInput.value.replace(/\s/g, '');
-            
-            if (aadhaarNumber.length !== 12 || !/^\d+$/.test(aadhaarNumber)) {
-                alert('Please enter a valid 12-digit Aadhaar number.');
-                return;
-            }
-
-            statusInitial.classList.add('hidden');
-            statusResult.classList.remove('hidden');
-            statusResult.innerHTML = `<div class="text-center p-4">Checking...</div>`;
-
-            setTimeout(() => {
-                const isSuccess = Math.random() > 0.3; // 70% chance of success
-                if (isSuccess) {
-                    statusResult.innerHTML = `
-                        <div class="bg-green-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto">
-                           <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-bold mt-4 text-green-700">Congratulations!</h3>
-                        <p class="text-gray-600 mt-2">Your Aadhaar is successfully seeded with your bank for DBT payments.</p>
-                        <p class="text-sm mt-1 text-gray-500">Bank: State Bank of India (XX...1234)</p>
-                    `;
-                } else {
-                     statusResult.innerHTML = `
-                        <div class="bg-red-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto">
-                            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-bold mt-4 text-red-700">Action Required!</h3>
-                        <p class="text-gray-600 mt-2">Your Aadhaar is NOT seeded for DBT payments. Please visit your bank branch with your Aadhaar card to complete the process.</p>
-                    `;
-                }
-            }, 1500);
         });
 
         // --- Aadhaar Dost Chatbot Logic ---

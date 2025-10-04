@@ -26,3 +26,6 @@ body {
 .rotate-180 {
     transform: rotate(180deg);
 }
+h2 {
+    text-align: center;
+}

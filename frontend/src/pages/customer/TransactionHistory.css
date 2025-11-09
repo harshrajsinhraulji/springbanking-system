@@ -1,0 +1,162 @@
+.transactions-page {
+  width: 100%;
+}
+
+.transactions-controls {
+  margin-bottom: 24px;
+}
+
+.account-select {
+  max-width: 400px;
+}
+
+.transactions-table-container {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-table thead {
+  background: var(--bg-secondary);
+}
+
+.transactions-table th {
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.transactions-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.transactions-table tbody tr:hover {
+  background: var(--bg-hover);
+}
+
+.transaction-id {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.transaction-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.transaction-type.success {
+  background: var(--success-subtle);
+  color: #065f46;
+}
+
+.transaction-type.danger {
+  background: var(--danger-subtle);
+  color: #991b1b;
+}
+
+.transaction-type.info {
+  background: var(--info-subtle);
+  color: #164e63;
+}
+
+.type-icon {
+  font-size: 0.95rem;
+}
+
+.amount {
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: -0.3px;
+}
+
+.amount.positive {
+  color: var(--success);
+}
+
+.amount.negative {
+  color: var(--danger);
+}
+
+.balance {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-completed {
+  background: var(--success-subtle);
+  color: #065f46;
+}
+
+.status-pending {
+  background: var(--warning-subtle);
+  color: #92400e;
+}
+
+.status-failed {
+  background: var(--danger-subtle);
+  color: #991b1b;
+}
+
+.status-cancelled {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.load-more {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 48px 20px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .transactions-table-container {
+    padding: 16px;
+  }
+
+  .transactions-table {
+    font-size: 0.85rem;
+  }
+
+  .transactions-table th,
+  .transactions-table td {
+    padding: 10px 8px;
+  }
+}

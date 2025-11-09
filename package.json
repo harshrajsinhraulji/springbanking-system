@@ -1,0 +1,19 @@
+{
+  "name": "springbanking-system",
+  "version": "1.0.0",
+  "description": "Spring Banking System - Full Stack Application",
+  "scripts": {
+    "start": "powershell -ExecutionPolicy Bypass -File ./scripts/start-all.ps1",
+    "stop": "powershell -ExecutionPolicy Bypass -File ./scripts/stop-services.ps1",
+    "dev": "powershell -ExecutionPolicy Bypass -File ./scripts/start-all.ps1"
+  },
+  "keywords": [
+    "spring-boot",
+    "react",
+    "banking",
+    "full-stack"
+  ],
+  "author": "",
+  "license": "Apache-2.0"
+}
+

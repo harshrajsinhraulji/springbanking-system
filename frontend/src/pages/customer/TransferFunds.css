@@ -1,0 +1,106 @@
+.transfer-page {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 32px;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.page-header p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.transfer-container {
+  width: 100%;
+}
+
+.transfer-card {
+  background: var(--bg-card);
+  border-radius: 20px;
+  padding: 32px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
+}
+
+.transfer-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.balance-info {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  padding: 28px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.balance-info p {
+  font-size: 0.9rem;
+  opacity: 0.95;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.balance-info h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.transfer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--text);
+  font-size: 0.875rem;
+  letter-spacing: 0.2px;
+}
+
+.error-text {
+  color: var(--danger);
+  font-size: 0.8rem;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.transfer-btn {
+  width: 100%;
+  padding: 13px;
+  font-size: 0.95rem;
+  margin-top: 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .transfer-card {
+    padding: 24px;
+  }
+
+  .balance-info h2 {
+    font-size: 2rem;
+  }
+}

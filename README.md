@@ -27,6 +27,7 @@
 - [Database Schema](#-database-schema)
 - [Testing](#-testing)
 - [Deployment](#-deployment)
+- [Hosting Options](#-hosting-options)
 - [Contributing](#-contributing)
 
 ---
@@ -516,6 +517,12 @@ Create `.env` file from `.env.example` and configure:
 - Server port
 - Logging levels
 - API URLs
+
+---
+
+## ☁️ Hosting Options
+
+See `HOSTING_GUIDE.md` for long-lived free options, including Oracle Cloud Infrastructure (Always Free) with a VM running Docker for Spring Boot, React, and MySQL.
 
 ---
 
